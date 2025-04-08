@@ -41,7 +41,7 @@
     margin: 4pt 0;
     font-size: 12pt;
     font-weight: normal;
-    text-align: justify; /* ✅ Rata kiri-kanan */
+    text-align: justify;
   }
 
   #cv-ats ul {
@@ -53,10 +53,14 @@
     margin: 2pt 0;
     font-size: 12pt;
     font-weight: normal;
-    text-align: justify; /* ✅ Rata kiri-kanan */
+    text-align: justify;
   }
 
-  /* Optional: control page breaks */
+  .page-break {
+    page-break-before: always;
+    break-before: page;
+  }
+
   #cv-ats h2, #cv-ats h1 {
     page-break-after: avoid;
     page-break-before: auto;
