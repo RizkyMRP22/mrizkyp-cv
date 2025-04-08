@@ -7,14 +7,20 @@ document.addEventListener("DOMContentLoaded", function () {
       atsElement.classList.remove("hidden");
 
       const opt = {
-        margin: 0.5,
+        margin: 10, // mm
         filename: "Rizky_MRP_CV_ATS.pdf",
         image: { type: "jpeg", quality: 0.98 },
-        html2canvas: { scale: 2 },
+        html2canvas: {
+          scale: 3,       // High quality render
+          useCORS: true   // If you're loading images from external source
+        },
         jsPDF: {
           unit: "mm",
           format: "a4",
           orientation: "portrait"
+        },
+        pagebreak: {
+          mode: ['avoid-all', 'css', 'legacy']
         }
       };
 

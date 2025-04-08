@@ -11,13 +11,26 @@
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <style>
-    #cv-ats {
-      width: 210mm;
-      padding: 20mm;
-      font-size: 12pt;
-      line-height: 1.5;
-    }
-  </style>
+  #cv-ats {
+    width: 100%;
+    max-width: 210mm;
+    padding: 20mm;
+    font-size: 12pt;
+    line-height: 1.5;
+    box-sizing: border-box;
+  }
+
+  /* Avoid page breaks in mid-content */
+  #cv-ats h2 {
+    page-break-before: auto;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+
+  #cv-ats ul, #cv-ats p {
+    page-break-inside: avoid;
+  }
+</style>
 </head>
 <body class="bg-white text-gray-800 font-sans p-10">
 <div class="text-right mb-4">
