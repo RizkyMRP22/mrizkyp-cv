@@ -4,55 +4,53 @@
   <meta charset="UTF-8" />
   <title>Rizky's CV</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Prevent Caching -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body class="bg-white text-gray-800 font-sans p-10">
+  <div class="text-right mb-4">
+    <button onclick="downloadPDF()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+      Download CV as PDF
+    </button>
+  </div>
 
-  <header class="text-center mb-12">
-    <h1 id="name" class="text-4xl font-bold"></h1>
-    <p id="title" class="text-lg text-gray-600"></p>
-    <p id="contact" class="text-sm mt-2"></p>
-  </header>
+  <div id="cv-content">
+    <header class="text-center mb-12">
+      <h1 id="name" class="text-4xl font-bold"></h1>
+      <p id="title" class="text-lg text-gray-600"></p>
+      <p id="contact" class="text-sm mt-2"></p>
+    </header>
 
-  <section class="mb-8">
-    <h2 class="text-2xl font-semibold border-b pb-2 mb-4">💼 Experience</h2>
-    <div id="experiences"></div>
-  </section>
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">💼 Experience</h2>
+      <div id="experiences"></div>
+    </section>
 
-  <section class="mb-8">
-    <h2 class="text-2xl font-semibold border-b pb-2 mb-4">🎓 Education</h2>
-    <div id="education"></div>
-  </section>
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">🎓 Education</h2>
+      <div id="education"></div>
+    </section>
 
-  <section class="mb-8">
-    <h2 class="text-2xl font-semibold border-b pb-2 mb-4">🛠️ Skills</h2>
-    <div id="skills" class="text-sm"></div>
-  </section>
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">🛠️ Skills</h2>
+      <div id="skills" class="text-sm"></div>
+    </section>
 
-  <section class="mb-8">
-    <h2 class="text-2xl font-semibold border-b pb-2 mb-4">📂 Projects</h2>
-    <ul id="projects" class="list-disc list-inside text-sm"></ul>
-  </section>
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">📂 Projects</h2>
+      <ul id="projects" class="list-disc list-inside text-sm"></ul>
+    </section>
 
-  <section>
-    <h2 class="text-2xl font-semibold border-b pb-2 mb-4">📜 Certifications</h2>
-    <ul id="certifications" class="list-disc list-inside text-sm"></ul>
-  </section>
+    <section>
+      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">📜 Certifications</h2>
+      <ul id="certifications" class="list-disc list-inside text-sm"></ul>
+    </section>
+  </div>
 
-  <!-- Dynamically load scripts with timestamp to prevent caching -->
-  <script>
-    const ts = Date.now();
-    ['data.js', 'main.js'].forEach(file => {
-      const script = document.createElement('script');
-      script.src = `${file}?v=${ts}`;
-      document.body.appendChild(script);
-    });
-  </script>
+  <script src="./data.js?v=1.0.0"></script>
+  <script src="./main.js?v=1.0.0"></script>
 </body>
 </html>
