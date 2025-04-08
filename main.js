@@ -14,12 +14,11 @@ window.onload = function () {
     div.innerHTML = `
       <h3 class="font-bold">${exp.role} – ${exp.company}</h3>
       <p class="text-sm text-gray-600">${exp.years}${exp.location ? " · " + exp.location : ""}</p>
-      ${
-        exp.bullets.length
-          ? `<ul class="list-disc list-inside text-sm mt-1">
+      ${exp.bullets.length
+        ? `<ul class="list-disc list-inside text-sm mt-1">
                ${exp.bullets.map(b => `<li>${b}</li>`).join("")}
              </ul>`
-          : ""
+        : ""
       }
     `;
     expEl.appendChild(div);
@@ -51,16 +50,15 @@ window.onload = function () {
   });
 };
 
-  const element = document.getElementById("cv-content");
-  const opt = {
-    margin:       0.5,
-    filename:     'Rizky_MRP_CV.pdf',
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 2 },
-    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-  };
-  html2pdf().set(opt).from(element).save();
-}
+const element = document.getElementById("cv-content");
+const opt = {
+  margin: 0.5,
+  filename: 'Rizky_MRP_CV.pdf',
+  image: { type: 'jpeg', quality: 0.98 },
+  html2canvas: { scale: 2 },
+  jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+};
+html2pdf().set(opt).from(element).save();
 
 
 function renderATS() {
