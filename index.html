@@ -35,39 +35,24 @@
     margin-bottom: 8pt;
     border-bottom: 1px solid #ccc;
     padding-bottom: 4pt;
+    page-break-after: avoid;
   }
 
-  #cv-ats p {
+  #cv-ats p, #cv-ats li {
     margin: 4pt 0;
     font-size: 12pt;
     font-weight: normal;
     text-align: justify;
+    page-break-inside: avoid;
   }
 
   #cv-ats ul {
-    margin: 6pt 0 12pt 20pt;
-    padding: 0;
-  }
-
-  #cv-ats li {
-    margin: 2pt 0;
-    font-size: 12pt;
-    font-weight: normal;
-    text-align: justify;
+    margin-left: 20pt;
   }
 
   .page-break {
     page-break-before: always;
     break-before: page;
-  }
-
-  #cv-ats h2, #cv-ats h1 {
-    page-break-after: avoid;
-    page-break-before: auto;
-  }
-
-  #cv-ats ul, #cv-ats p {
-    page-break-inside: avoid;
   }
 </style>
 </head>

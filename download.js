@@ -8,28 +8,19 @@ document.addEventListener("DOMContentLoaded", function () {
       atsElement.classList.remove("hidden");
 
       const opt = {
-        margin: 10,
-        filename: "Rizky_MRP_CV_ATS.pdf",
-        image: { type: "jpeg", quality: 0.98 },
-        html2canvas: {
-          scale: 3,
-          useCORS: true
-        },
-        jsPDF: {
-          unit: "mm",
-          format: "a4",
-          orientation: "portrait"
-        },
-        pagebreak: {
-          mode: ['avoid-all', 'css', 'legacy']
-        }
+        margin:       10,
+        filename:     "Rizky_MRP_CV_ATS.pdf",
+        image:        { type: "jpeg", quality: 0.98 },
+        html2canvas:  { scale: 3, useCORS: true },
+        jsPDF:        { unit: "mm", format: "a4", orientation: "portrait" },
+        pagebreak:    { mode: ['avoid-all', 'css', 'legacy'] }
       };
-
+      
       html2pdf()
         .set(opt)
-        .from(atsElement)
+        .from(document.getElementById("cv-ats"))
         .save()
-        .then(() => atsElement.classList.add("hidden"));
+        .then(() => document.getElementById("cv-ats").classList.add("hidden"));
     });
   }
 });
