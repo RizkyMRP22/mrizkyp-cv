@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
       atsElement.classList.remove("hidden");
 
       const opt = {
-        margin: 10,
+        margin: 5,
         filename: "Rizky_MRP_CV_ATS.pdf",
         image: { type: "jpeg", quality: 0.98 },
         html2canvas: {
