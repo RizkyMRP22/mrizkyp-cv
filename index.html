@@ -1,88 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV – John Doe</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  </head>
-  <body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rizky's CV</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-800 font-sans p-10">
 
-    <div class="max-w-4xl mx-auto px-6 py-12">
-      <!-- Header -->
-      <header class="text-center mb-12">
-        <h1 class="text-4xl font-bold">John Doe</h1>
-        <p class="text-lg text-gray-600">Software Engineer | Full Stack Developer</p>
-        <p class="text-sm mt-2">
-          📍 Jakarta, Indonesia · 📧 john.doe@email.com · 📞 +62 812-3456-7890
-        </p>
-        <p class="mt-1 text-sm">
-          🌐 <a href="https://github.com/johndoe" class="text-blue-500">GitHub</a> · 
-          <a href="https://linkedin.com/in/johndoe" class="text-blue-500">LinkedIn</a>
-        </p>
-      </header>
+  <header class="text-center mb-12">
+    <h1 id="name" class="text-4xl font-bold"></h1>
+    <p id="title" class="text-lg text-gray-600"></p>
+    <p id="contact" class="text-sm mt-2"></p>
+  </header>
 
-      <!-- Experience -->
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">💼 Experience</h2>
-        <div class="mb-4">
-          <h3 class="font-bold">Software Engineer – PT Teknologi Hebat</h3>
-          <p class="text-sm text-gray-600">2022 – Present</p>
-          <ul class="list-disc list-inside text-sm mt-1">
-            <li>Developed and maintained scalable web applications using React and Node.js.</li>
-            <li>Optimized API performance by 30% and led a team of 3 developers.</li>
-          </ul>
-        </div>
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold border-b pb-2 mb-4">💼 Experience</h2>
+    <div id="experiences"></div>
+  </section>
 
-        <div>
-          <h3 class="font-bold">Intern – Tokotech</h3>
-          <p class="text-sm text-gray-600">2021 – 2022</p>
-          <ul class="list-disc list-inside text-sm mt-1">
-            <li>Assisted in mobile development using Flutter.</li>
-            <li>Helped test and document internal APIs.</li>
-          </ul>
-        </div>
-      </section>
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold border-b pb-2 mb-4">🎓 Education</h2>
+    <div id="education"></div>
+  </section>
 
-      <!-- Education -->
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">🎓 Education</h2>
-        <p><strong>Bachelor of Computer Science</strong><br>Universitas Indonesia — 2018 - 2022</p>
-      </section>
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold border-b pb-2 mb-4">🛠️ Skills</h2>
+    <div id="skills" class="text-sm"></div>
+  </section>
 
-      <!-- Skills -->
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">🛠️ Skills</h2>
-        <p class="text-sm">
-          <strong>Languages:</strong> JavaScript, TypeScript, Go, Python<br>
-          <strong>Frameworks:</strong> React, Next.js, Node.js, Express<br>
-          <strong>Tools:</strong> Docker, Git, PostgreSQL, Prisma, Firebase
-        </p>
-      </section>
+  <section class="mb-8">
+    <h2 class="text-2xl font-semibold border-b pb-2 mb-4">📂 Projects</h2>
+    <ul id="projects" class="list-disc list-inside text-sm"></ul>
+  </section>
 
-      <!-- Projects -->
-      <section class="mb-10">
-        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">📂 Projects</h2>
-        <ul class="list-disc list-inside text-sm">
-          <li>
-            <a href="https://github.com/johndoe/myindibiz-assistant" class="text-blue-500 font-medium">MyIndiBiz Assistant</a> – AI-based assistant for B2B market profiling and sizing.
-          </li>
-          <li>
-            <a href="https://github.com/johndoe/mytens" class="text-blue-500 font-medium">MyTens</a> – Gamified stress relief app with real-time biofeedback.
-          </li>
-        </ul>
-      </section>
+  <section>
+    <h2 class="text-2xl font-semibold border-b pb-2 mb-4">📜 Certifications</h2>
+    <ul id="certifications" class="list-disc list-inside text-sm"></ul>
+  </section>
 
-      <!-- Certification -->
-      <section>
-        <h2 class="text-2xl font-semibold border-b pb-2 mb-4">📜 Certifications</h2>
-        <ul class="list-disc list-inside text-sm">
-          <li>Google Associate Cloud Engineer – 2023</li>
-          <li>AWS Certified Developer – 2022</li>
-        </ul>
-      </section>
-    </div>
-
-  </body>
+  <script src="./data.js"></script>
+  <script src="./main.js"></script>
+</body>
 </html>
