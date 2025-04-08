@@ -45,9 +45,13 @@ function renderWebView(cvData) {
   });
 
   const certEl = document.getElementById("certifications");
-  cvData.certifications.forEach(c => {
+  cvData.certifications.forEach(cert => {
     const li = document.createElement("li");
-    li.textContent = c;
+    if (cert.link && cert.link.startsWith("http")) {
+      li.innerHTML = `<a href="${cert.link}" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">${cert.name}</a>`;
+    } else {
+      li.textContent = cert.name;
+    }
     certEl.appendChild(li);
   });
 }

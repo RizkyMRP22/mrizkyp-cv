@@ -35,7 +35,11 @@ function renderATSView(cvData) {
 
     <h2>Certifications</h2>
     <ul>
-      ${cvData.certifications.map(c => `<li>${c}</li>`).join("")}
+      ${cvData.certifications.map(cert =>
+        cert.link && cert.link.startsWith("http")
+          ? `<li><a href="${cert.link}" target="_blank" rel="noopener noreferrer">${cert.name}</a></li>`
+          : `<li>${cert.name}</li>`
+      ).join("")}
     </ul>
   `;
 }

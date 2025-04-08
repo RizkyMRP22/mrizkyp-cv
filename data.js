@@ -100,10 +100,25 @@ I’m passionate about continuous learning and leveraging data-driven approaches
   ],
 
   certifications: [
-    "Certified Indonesia Scrum Master (ISM) 1",
-    "Certified Indonesia Scrum Master (ISM) 2",
-    "Katalon Studio - Step by Step for Beginners",
-    "Google Data Analytics – Coursera",
-    "Certified Tester Foundation Level (CTFL) – ISTQB"
+    {
+      name:"Certified Indonesia Scrum Master (ISM) 1",
+      link:""
+    },
+    {
+      name:"Certified Indonesia Scrum Master (ISM) 2",
+      link:""
+    },
+    {
+      name:"Katalon Studio - Step by Step for Beginners",
+      link:""
+    },
+    {
+      name:"Google Data Analytics – Coursera",
+      link:""
+    },
+    {
+      name:"Certified Tester Foundation Level (CTFL) – ISTQB",
+      link:"http://scr.istqb.org/?name=Mohammad+Rizky+Pratama&number=21-CTFL-187617-12&orderBy=relevancy&orderDirection=&dateStart=&dateEnd=&expiryStart=&expiryEnd=&certificationBody=&examProvider=&certificationLevel=&country=&resultsPerPage=10"
+    } 
   ]
 };
