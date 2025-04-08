@@ -3,8 +3,8 @@ function renderATSView(cvData) {
   ats.innerHTML = `
     <h1>${cvData.name}</h1>
     <p>${cvData.location} | ${cvData.email} ${cvData.phone ? '| ' + cvData.phone : ''}</p>
-    <p>GitHub: ${cvData.github}</p>
-    <p>LinkedIn: ${cvData.linkedin}</p>
+    <p>GitHub: <em>${cvData.github}</em></p>
+    <p>LinkedIn: <em>${cvData.linkedin}</em></p>
 
     <h2>Professional Summary</h2>
     <p>${cvData.summary}</p>
@@ -37,7 +37,7 @@ function renderATSView(cvData) {
     <ul>
       ${cvData.certifications.map(cert =>
         cert.link && cert.link.startsWith("http")
-          ? `<li><a href="${cert.link}" target="_blank" rel="noopener noreferrer">${cert.name}</a></li>`
+          ? `<li><a href="${cert.link}" target="_blank" rel="noopener noreferrer"><em>${cert.name}</em></a></li>`
           : `<li>${cert.name}</li>`
       ).join("")}
     </ul>
