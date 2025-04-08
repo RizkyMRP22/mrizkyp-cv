@@ -1,37 +1,64 @@
 const cvData = {
-  name: "Rizky Muhammad Rizky Putra",
-  title: "Software Engineer | Full Stack Developer",
+  name: "Mohammad Rizky Pratama",
+  title: "Software Quality Assurance Engineer | Technical Analyst",
   location: "Jakarta, Indonesia",
   email: "rizky@email.com",
-  phone: "+62 812-3456-7890",
+  phone: "+62 81350672619",
   github: "https://github.com/RizkyMRP22",
-  linkedin: "https://linkedin.com/in/rizkymrp",
+  linkedin: "https://www.linkedin.com/in/mrizkyp22/",
 
   experiences: [
     {
-      role: "Software Engineer",
-      company: "PT Teknologi Hebat",
-      years: "2022 – Present",
+      role: "Technical Lead B2B Regional Support",
+      company: "Telkom Indonesia",
+      years: "Jul 2024 – Present",
+      location: "Jakarta, Indonesia",
       bullets: [
-        "Developed scalable apps using React & Node.js",
-        "Led a team of 3 engineers in agile development",
-      ],
+        "Supporting development tools (MyTens Lite & MyIndibiz Assistant) for Regional"
+      ]
     },
     {
-      role: "Intern",
-      company: "Tokotech",
-      years: "2021 – 2022",
-      bullets: [
-        "Assisted in Flutter development",
-        "Helped test and document internal APIs",
-      ],
+      role: "Industrial Lecturer",
+      company: "Telkom University",
+      years: "March 2022 – Dec 2023",
+      location: "Bandung Area, West Java, Indonesia",
+      bullets: []
     },
+    {
+      role: "Software Quality Assurance Engineer",
+      company: "Telkom Indonesia",
+      years: "Dec 2018 – Present ",
+      location: "Jakarta, Indonesia",
+      bullets: [
+        "Collaborate with Management, PO, Design team, and DEV team",
+        "Ensure business requirements are ready for development (Backlog, Design, and Documentation)",
+        "Lead multiple squads",
+        "Recruit talent as an interviewer",
+        "Serve as a mentor",
+        "Manage production process",
+        "Create Test Case Management with Xray and Confluence",
+        "Create Bug Management with JIRA and Confluence",
+        "Implement Android, iOS, WEB, and API Automation Testing with Katalon Studio",
+        "Create API Automation Testing using Newman Postman",
+        "Perform Performance Testing (Stress Test and Load Test) with JMeter",
+        "Implement CI/CD Testing with Jenkins CI",
+        "Create & manage Infrastructure Automation Tests (Tools, Processes, Servers, Code Bases)",
+        "Lead research and development for Testing Tools"
+      ]
+    },
+    {
+      role: "Software Quality Assurance Engineer (Internship)",
+      company: "Telkom Indonesia",
+      years: "Jul 2018 – Dec 2018",
+      location: "Bandung Area, West Java, Indonesia",
+      bullets: []
+    }
   ],
 
   education: {
-    degree: "Bachelor of Computer Science",
-    university: "Universitas Indonesia",
-    years: "2018 - 2022",
+    degree: "Bachelor of Computer Engineering",
+    university: "Telkom University",
+    years: "2013 - 2021",
   },
 
   skills: {
