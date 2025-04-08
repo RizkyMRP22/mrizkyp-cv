@@ -1,16 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Rizky's CV</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
-  <style>
+<meta charset="utf-8"/>
+<title>Rizky's CV</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control"/>
+<meta content="no-cache" http-equiv="Pragma"/>
+<meta content="0" http-equiv="Expires"/>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<style>
     #cv-ats {
       width: 210mm;
       padding: 20mm;
@@ -18,53 +18,61 @@
       line-height: 1.5;
     }
   </style>
-
 </head>
 <body class="bg-white text-gray-800 font-sans p-10">
-  <div class="text-right mb-4">
-    <button id="download-btn" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+<div class="text-right mb-4">
+<button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition" id="download-btn">
       Download CV as PDF
     </button>
-  </div>
+</div>
+<div id="cv-content">
+<div class="hidden" id="cv-ats"></div>
+<header class="text-center mb-12">
+<h1 class="text-4xl font-bold" id="name"></h1>
+<p class="text-lg text-gray-600" id="title"></p>
+<p class="text-sm mt-2" id="contact"></p>
+</header>
+<section class="mb-8">
+<h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center">💼 Experience<button class="toggle-btn text-blue-500 text-sm">➖</button></h2>
+<div class="section-content" id="experiences"></div>
+</section>
+<section class="mb-8">
+<h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center">🎓 Education<button class="toggle-btn text-blue-500 text-sm">➖</button></h2>
+<div class="section-content" id="education"></div>
+</section>
+<section class="mb-8">
+<h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center">🛠️ Skills<button class="toggle-btn text-blue-500 text-sm">➖</button></h2>
+<div class="text-sm section-content" id="skills"></div>
+</section>
+<section class="mb-8">
+<h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center">📂 Projects<button class="toggle-btn text-blue-500 text-sm">➖</button></h2>
+<ul class="list-disc list-inside text-sm section-content" id="projects"></ul>
+</section>
+<section>
+<h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center">📜 Certifications<button class="toggle-btn text-blue-500 text-sm">➖</button></h2>
+<ul class="list-disc list-inside text-sm section-content" id="certifications"></ul>
+</section>
+</div>
+<script src="./data.js?v=1.0.0" defer></script>
+<script src="./renderWeb.js" defer></script>
+<script src="./renderATS.js" defer></script>
+<script src="./download.js" defer></script>
 
-  <div id="cv-content">
-<div id="cv-ats" class="hidden"></div>
-    <header class="text-center mb-12">
-      <h1 id="name" class="text-4xl font-bold"></h1>
-      <p id="title" class="text-lg text-gray-600"></p>
-      <p id="contact" class="text-sm mt-2"></p>
-    </header>
-
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">💼 Experience</h2>
-      <div id="experiences"></div>
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">🎓 Education</h2>
-      <div id="education"></div>
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">🛠️ Skills</h2>
-      <div id="skills" class="text-sm"></div>
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">📂 Projects</h2>
-      <ul id="projects" class="list-disc list-inside text-sm"></ul>
-    </section>
-
-    <section>
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">📜 Certifications</h2>
-      <ul id="certifications" class="list-disc list-inside text-sm"></ul>
-    </section>
-  </div>
-
-  <script src="./data.js?v=1.0.0" defer></script>
-  <script src="./renderWeb.js" defer></script>
-  <script src="./renderATS.js" defer></script>
-  <script src="./download.js" defer></script>
-
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".toggle-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const content = btn.parentElement.nextElementSibling;
+      if (content.classList.contains("hidden")) {
+        content.classList.remove("hidden");
+        btn.textContent = "➖";
+      } else {
+        content.classList.add("hidden");
+        btn.textContent = "➕";
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>

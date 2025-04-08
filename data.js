@@ -8,8 +8,7 @@ const cvData = {
   linkedin: "https://www.linkedin.com/in/mrizkyp22",
 
   summary: `As a Software Quality Assurance Engineer with over five years of experience, I’ve worked on diverse and challenging projects, ensuring top-tier software delivery. 
-In addition to this, I serve as an Industrial Lecturer at Telkom University. 
-I'm a CTFL-certified QA professional, an ISM 1 & 2 certified Scrum Master, and a Google Data Analytics certificate holder.
+In addition to this, I serve as an Industrial Lecturer at Telkom University. I'm a CTFL-certified QA professional, an ISM 1 & 2 certified Scrum Master, and a Google Data Analytics certificate holder.
 I’m passionate about continuous learning and leveraging data-driven approaches in quality assurance.`,
 
   experiences: [
