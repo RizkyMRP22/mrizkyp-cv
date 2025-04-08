@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("download-btn");
   if (btn) {
@@ -12,7 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
         filename: "Rizky_MRP_CV_ATS.pdf",
         image: { type: "jpeg", quality: 0.98 },
         html2canvas: { scale: 2 },
-        jsPDF: { unit: "in", format: "letter", orientation: "portrait" }
+        jsPDF: {
+          unit: "mm",
+          format: "a4",
+          orientation: "portrait"
+        }
       };
 
       html2pdf()
