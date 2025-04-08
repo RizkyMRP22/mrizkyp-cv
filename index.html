@@ -15,23 +15,55 @@
     width: 100%;
     max-width: 210mm;
     padding: 20mm;
-    font-size: 12pt;
-    line-height: 1.5;
-    /* box-sizing: border-box; */
     font-family: Arial, sans-serif;
-  }
-  #cv-ats h1, #cv-ats h2 {
-    font-weight: bold;
-    font-size: 18pt;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  #cv-ats p, #cv-ats li {
-    font-weight: normal;
     font-size: 12pt;
-    margin: 0.25rem 0;
+    line-height: 1.6;
+    color: #000;
+    background-color: #fff;
   }
-  </style>
+
+  #cv-ats h1 {
+    font-size: 22pt;
+    font-weight: bold;
+    margin-bottom: 10pt;
+  }
+
+  #cv-ats h2 {
+    font-size: 16pt;
+    font-weight: bold;
+    margin-top: 20pt;
+    margin-bottom: 8pt;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 4pt;
+  }
+
+  #cv-ats p {
+    margin: 4pt 0;
+    font-size: 12pt;
+    font-weight: normal;
+  }
+
+  #cv-ats ul {
+    margin: 6pt 0 12pt 20pt;
+    padding: 0;
+  }
+
+  #cv-ats li {
+    margin: 2pt 0;
+    font-size: 12pt;
+    font-weight: normal;
+  }
+
+  /* Optional: control page breaks */
+  #cv-ats h2, #cv-ats h1 {
+    page-break-after: avoid;
+    page-break-before: auto;
+  }
+
+  #cv-ats ul, #cv-ats p {
+    page-break-inside: avoid;
+  }
+</style>
 </head>
 <body class="bg-white text-gray-800 font-sans p-10">
 <div class="text-right mb-4">

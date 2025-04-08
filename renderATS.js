@@ -1,36 +1,39 @@
 function renderATSView(cvData) {
   const ats = document.getElementById("cv-ats");
   ats.innerHTML = `
-    <h1 class="text-xl font-bold">${cvData.name}</h1>
-    <p>${cvData.location} | ${cvData.email} | ${cvData.phone}</p>
+    <h1>${cvData.name}</h1>
+    <p>${cvData.location} | ${cvData.email} ${cvData.phone ? '| ' + cvData.phone : ''}</p>
     <p>GitHub: ${cvData.github} | LinkedIn: ${cvData.linkedin}</p>
 
-    <h2 class="mt-4 font-semibold">Professional Summary</h2>
+    <h2>Professional Summary</h2>
     <p>${cvData.summary}</p>
 
-    <h2 class="mt-4 font-semibold">Experience</h2>
+    <h2>Experience</h2>
     ${cvData.experiences.map(exp => `
-      <p><strong>${exp.role} – ${exp.company}</strong> (${exp.years})</p>
-      <ul class="list-disc list-inside">
-        ${exp.bullets.map(b => `<li>${b}</li>`).join("")}
-      </ul>
+      <p><strong>${exp.role} – ${exp.company}</strong></p>
+      <p>${exp.location ? exp.location + " · " : ""}${exp.years}</p>
+      ${exp.bullets.length ? `
+        <ul>
+          ${exp.bullets.map(b => `<li>${b}</li>`).join("")}
+        </ul>` : ""}
     `).join("")}
 
-    <h2 class="mt-4 font-semibold">Education</h2>
-    <p>${cvData.education.degree} – ${cvData.education.university} (${cvData.education.years})</p>
+    <h2>Education</h2>
+    <p>${cvData.education.degree}</p>
+    <p>${cvData.education.university} (${cvData.education.years})</p>
 
-    <h2 class="mt-4 font-semibold">Skills</h2>
-    <p>${[
-      ...cvData.skills.languages,
-      ...cvData.skills.frameworks,
-      ...cvData.skills.tools
-    ].join(", ")}</p>
+    <h2>Skills</h2>
+    <p><strong>Languages:</strong> ${cvData.skills.languages.join(", ")}</p>
+    <p><strong>Frameworks:</strong> ${cvData.skills.frameworks.join(", ")}</p>
+    <p><strong>Tools:</strong> ${cvData.skills.tools.join(", ")}</p>
 
-    <h2 class="mt-4 font-semibold">Projects</h2>
-    ${cvData.projects.map(p => `<p>${p.name} – ${p.desc}</p>`).join("")}
+    <h2>Projects</h2>
+    <ul>
+      ${cvData.projects.map(p => `<li><strong>${p.name}:</strong> ${p.desc}</li>`).join("")}
+    </ul>
 
-    <h2 class="mt-4 font-semibold">Certifications</h2>
-    <ul class="list-disc list-inside">
+    <h2>Certifications</h2>
+    <ul>
       ${cvData.certifications.map(c => `<li>${c}</li>`).join("")}
     </ul>
   `;
