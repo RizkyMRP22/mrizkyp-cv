@@ -6,7 +6,7 @@ function renderATSView(cvData) {
     <p>GitHub: ${cvData.github} | LinkedIn: ${cvData.linkedin}</p>
 
     <h2 class="mt-4 font-semibold">Professional Summary</h2>
-    <p>Experienced QA Engineer and Technical Lead with expertise in test automation, CI/CD pipelines, infrastructure testing, and squad leadership.</p>
+    <p>${cvData.summary}</p>
 
     <h2 class="mt-4 font-semibold">Experience</h2>
     ${cvData.experiences.map(exp => `

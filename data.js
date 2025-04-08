@@ -66,7 +66,7 @@ I’m passionate about continuous learning and leveraging data-driven approaches
   ],
 
   education: {
-    degree: "Bachelor's degree",
+    degree: "Bachelor's Degree in Computer Engineering",
     university: "Telkom University",
     years: "2013 – 2020"
   },
