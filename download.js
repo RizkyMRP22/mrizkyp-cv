@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("download-btn");
   if (btn) {
@@ -7,12 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
       atsElement.classList.remove("hidden");
 
       const opt = {
-        margin: 10, // mm
+        margin: 10,
         filename: "Rizky_MRP_CV_ATS.pdf",
         image: { type: "jpeg", quality: 0.98 },
         html2canvas: {
-          scale: 3,       // High quality render
-          useCORS: true   // If you're loading images from external source
+          scale: 3,
+          useCORS: true
         },
         jsPDF: {
           unit: "mm",
