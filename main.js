@@ -1,3 +1,4 @@
+
 // Render visual CV when page loads
 window.onload = function () {
   document.getElementById("name").textContent = cvData.name;
@@ -56,6 +57,8 @@ window.onload = function () {
     certEl.appendChild(li);
   });
 
+};
+
   // Attach download listener AFTER everything is rendered
   const btn = document.getElementById("download-btn");
   if (btn) {
@@ -79,7 +82,6 @@ window.onload = function () {
         .then(() => atsElement.classList.add("hidden"));
     });
   }
-};
 
 // Render ATS-friendly version (used before download)
 function renderATS() {
