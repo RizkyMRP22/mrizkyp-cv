@@ -27,6 +27,18 @@ I’m passionate about continuous learning and leveraging data-driven approaches
       ]
     },
     {
+      role: "Industrial Lecturer",
+      company: "Telkom University",
+      years: "Mar 2022 – Dec 2023",
+      location: "Indonesia",
+      bullets: [
+        "Coordinator of QA Class",
+        "Prepare and teach materials for scheduled classes",
+        "Prepare and deliver practice and exams",
+        "Mentor and monitor students"
+      ]
+    },
+    {
       role: "Software Quality Assurance Engineer",
       company: "Telkom Indonesia",
       years: "Dec 2018 – Present",
@@ -55,18 +67,6 @@ I’m passionate about continuous learning and leveraging data-driven approaches
       location: "Bandung, Indonesia",
       bullets: []
     },
-    {
-      role: "Industrial Lecturer",
-      company: "Telkom University",
-      years: "Mar 2022 – Present",
-      location: "Indonesia",
-      bullets: [
-        "Coordinator of QA Class",
-        "Prepare and teach materials for scheduled classes",
-        "Prepare and deliver practice and exams",
-        "Mentor and monitor students"
-      ]
-    }
   ],
 
   education: {
@@ -76,7 +76,7 @@ I’m passionate about continuous learning and leveraging data-driven approaches
   },
 
   skills: {
-    languages: ["JavaScript", "TypeScript", "Go", "Python"],
+    languages: ["JavaScript", "TypeScript","Python"],
     frameworks: ["React", "Next.js", "Node.js"],
     tools: [
       "Katalon Studio",
