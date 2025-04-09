@@ -32,7 +32,7 @@ function renderWebView(cvData) {
 
   const edu = cvData.education;
   document.getElementById("education").innerHTML = `
-    <p><strong>${edu.degree}</strong><br>${edu.university} — ${edu.years}</p>
+    <p><strong>${edu.degree}</strong><br>${edu.university} (${edu.years})</p>
   `;
 
   document.getElementById("skills").innerHTML = `
