@@ -8,8 +8,10 @@ const cvData = {
   github: "https://github.com/rizkymrp22",
   linkedin: "https://www.linkedin.com/in/mrizkyp22",
 
-  summary: `\tI'm a Technical Lead and QA Engineer at Telkom Indonesia with over 5 years of experience ensuring high-quality software delivery across various platforms. I have a strong background in test automation (Katalon, Postman, JMeter), CI/CD (Jenkins), and infrastructure testing.
-\tAlongside my technical role, I’ve contributed as an Industrial Lecturer at Telkom University, coordinating and mentoring QA students. \tI hold multiple certifications, including CTFL - ISTQB, ISM 1 & 2, and Google Data Analytics. Passionate about quality, continuous improvement, and using data-driven approaches to enhance software development.`,
+  summary: `Technical Lead and QA Engineer with over 5 years of experience at Telkom Indonesia, combining strong technical expertise with leadership in agile software development and quality assurance. Proven ability to lead cross-functional teams, define technical requirements, and ensure high-quality delivery of B2B digital products across the full software development lifecycle.</br>
+  <br>Expert in test automation (Katalon Studio, Postman, JMeter), CI/CD pipelines (Jenkins), and incident management, with hands-on experience in improving development processes through data-driven insights. Skilled in JavaScript, TypeScript, Python, and frameworks such as Node.js and Playwright.js.</br>
+  <br>Certified in ISTQB CTFL & CTAL-TA, with additional credentials in Scrum Mastery and Data Analytics. Former Industrial QA Lecturer at Telkom University, with a passion for mentoring and aligning industry practices with academic development.</br>
+  <br>Dedicated to delivering scalable, user-centric, and reliable software solutions that support business growth and operational excellence.`,
 
   experiences: [
     {
@@ -23,7 +25,11 @@ const cvData = {
         "Identified and assigned appropriate team resources",
         "Collaborated with UI/UX Designers to create intuitive interfaces based on business workflows",
         "Developed and managed a realistic implementation timeline using agile methodology",
-        "Led sprint planning and progress tracking to ensure timely delivery and alignment with business goals"
+        "Led sprint planning and progress tracking to ensure timely delivery and alignment with business goals",
+        "Manage and analyze incident tickets from the operational team to identify root causes",
+        "Improve incident monitoring and update mechanisms for better visibility",
+        "Use insights from incident analysis to enhance the development process and refine backlog items to reduce recurring issues",
+        "Collaborate with Product Owner and management to support decision-making in development priorities, resolving obstacles, and handling non-technical needs"
       ]
     },
     {
@@ -57,7 +63,7 @@ const cvData = {
         "Conduct performance testing using JMeter",
         "Implement CI/CD testing using Jenkins",
         "Manage infrastructure automation tests",
-        "Lead R&D for testing tools"
+        "Lead R&D for testing tools",
       ]
     },
     {
