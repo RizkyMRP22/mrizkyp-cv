@@ -102,6 +102,7 @@ function renderCertificationsSection(certifications) {
     if (!cert.name || cert.name.trim() === "") return;
 
     const details = [
+      cert.type,
       cert.name.trim(),
       cert.provider?.trim(),
       cert.years?.trim()

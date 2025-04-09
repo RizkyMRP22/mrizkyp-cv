@@ -124,42 +124,49 @@ const cvData = {
 
   certifications: [
     {
+      type:"Cource",
       name: "Certified ISTQB® Test Analyst Advanced Level (CTAL-TA)",
       provider: "",
       link: "https://digilearn.udemy.com/certificate/UC-625b73c1-c112-4a91-8302-763d7967fa8b/",
       years: "2024"
     },
     {
+      type:"Certification",
       name: "Certified Indonesia Scrum Master (ISM) 1",
       provider: "EKIPA",
       link: "https://drive.google.com/file/d/1OXEBQ3lSmikFh9BFl1Y5A1xT6bG4Cokd/view?usp=sharing",
       years: "2020"
     },
     {
+      type:"Certification",
       name: "Certified Indonesia Scrum Master (ISM) 2",
       provider:"EKIPA",
       link: "https://drive.google.com/file/d/1pGWhDOxxhIgFrxwGoNhMVbu78fTOEgws/view?usp=sharing",
       years: "2021"
     },
     {
+      type:"Cource",
       name: "Katalon Studio - Step by Step for Beginners",
       provider: "Udemy",
       link: "",
       years: ""
     },
     {
+      type:"Certification",
       name: "Google Data Analytics",
       provider:"Coursera",
       link: "https://www.coursera.org/account/accomplishments/specialization/certificate/D3A8DKD9QQSC",
       years: "2023"
     },
     {
+      type:"Certification",
       name: "Certified Tester Foundation Level (CTFL)",
       provider: "ISTQB",
       link: "http://scr.istqb.org/?name=Mohammad+Rizky+Pratama&number=21-CTFL-187617-12&orderBy=relevancy&orderDirection=&dateStart=&dateEnd=&expiryStart=&expiryEnd=&certificationBody=&examProvider=&certificationLevel=&country=&resultsPerPage=10",
       years: "2021"
     },
     {
+      type:"Certification",
       name: "Continuous Delivery and Devops",
       provider:"coursera",
       link: "",
