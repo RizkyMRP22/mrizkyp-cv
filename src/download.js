@@ -1,8 +1,24 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("download-btn");
   if (btn) {
     btn.addEventListener("click", () => {
+      const header = document.createElement("div");
+      header.id = "pdf-header";
+      header.style.position = "fixed";
+      header.style.top = "0";
+      header.style.left = "0";
+      header.style.padding = "10px";
+      header.style.fontSize = "10px";
+      header.style.zIndex = "9999";
+
+      const now = new Date();
+      const localTime = now.toLocaleString('en-GB', {
+        hour12: false,
+        timeZoneName: 'short'
+      });
+      header.textContent = `Downloaded: ${localTime}`;
+      document.body.appendChild(header);
+
       renderATSView(cvData);
       const atsElement = document.getElementById("cv-ats");
       atsElement.classList.remove("hidden");
@@ -20,7 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
         .set(opt)
         .from(document.getElementById("cv-ats"))
         .save()
-        .then(() => document.getElementById("cv-ats").classList.add("hidden"));
+        .then(() => {
+          document.body.removeChild(header);
+          document.getElementById("cv-ats").classList.add("hidden");
+        });
     });
   }
 });
