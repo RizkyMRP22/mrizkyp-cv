@@ -1,6 +1,9 @@
 // Render visual CV when page loads
 function renderWebView(cvData) {
-  document.getElementById("profile-photo").src = cvData.photo;
+  const photoImg = document.getElementById("profile-photo");
+  const photoLink = document.getElementById("profile-photo-link");
+  photoImg.src = cvData.photo;
+  photoLink.href = cvData.photo;
   document.getElementById("name").textContent = cvData.name;
   document.getElementById("title").textContent = cvData.title;
   document.getElementById("contact").innerHTML = `
