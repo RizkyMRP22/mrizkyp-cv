@@ -163,8 +163,11 @@
     const accessTimeElement = document.getElementById("access-time");
     if (accessTimeElement) {
       const now = new Date();
-      const formatted = now.toISOString().replace("T", " ").slice(0, 19) + " UTC";
-      accessTimeElement.textContent = "Accessed: " + formatted;
+      const offsetMinutes = now.getTimezoneOffset();
+      const offsetHours = -offsetMinutes / 60;
+      const offsetStr = `UTC${offsetHours >= 0 ? '+' : ''}${offsetHours}`;
+      const formatted = now.toISOString().replace("T", " ").slice(0, 19);
+      accessTimeElement.textContent = `Accessed: ${formatted} ${offsetStr}`;
     }
 
     document.addEventListener("DOMContentLoaded", () => {
