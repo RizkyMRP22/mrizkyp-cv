@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const now = new Date();
   const localTime = now.toLocaleString('en-GB', {
     hour12: false,
-    timeZoneName: 'short'
+    // timeZoneName: 'short'
   });
 
   if (btn) {
