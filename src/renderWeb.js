@@ -15,7 +15,7 @@ function renderWebView(cvData) {
   document.getElementById("contact").innerHTML = `
     📍 ${cvData.location} <br/> 
     ✉️ <a href="mailto:${cvData.email}" class="text-blue-500">${cvData.email}</a> · 
-    📞 <a href="https://wa.me/${whatsappPhone}" class="text-green-500" target="_blank" rel="noopener noreferrer">${cvData.phone}</a><br/>
+    📞 <a href="https://wa.me/${whatsappPhone}" class="text-green-500" target="_blank" rel="noopener noreferrer">call me in wa</a><br/>
     <a href="${cvData.github}" class="text-blue-500 inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-github"></i> GitHub
     </a> · 
