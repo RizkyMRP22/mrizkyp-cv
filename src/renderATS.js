@@ -12,11 +12,22 @@ function renderATSView(cvData) {
 }
 
 function renderHeader({ name, location, email, phone, github, linkedin }) {
+  const now = new Date();
+  const localTime = now.toLocaleString('en-GB', {
+    hour12: false,
+    timeZoneName: 'short'
+  });
+
   return `
-    <h1>${name}</h1>
-    <p>${location} | ${email}${phone ? ' | ' + phone : ''}</p>
-    <p>GitHub: <em>${github}</em></p>
-    <p>LinkedIn: <em>${linkedin}</em></p>
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+      <div style="font-size: 10px;">Downloaded: ${localTime}</div>
+      <div>
+        <h1>${name}</h1>
+        <p>${location} | ${email}${phone ? ' | ' + phone : ''}</p>
+        <p>GitHub: <em>${github}</em></p>
+        <p>LinkedIn: <em>${linkedin}</em></p>
+      </div>
+    </div>
   `;
 }
 
