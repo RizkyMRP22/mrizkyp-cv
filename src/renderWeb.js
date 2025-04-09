@@ -10,8 +10,12 @@ function renderWebView(cvData) {
   document.getElementById("title").textContent = cvData.title;
   document.getElementById("contact").innerHTML = `
     📍 ${cvData.location} · 📧 ${cvData.email} · 📞 ${cvData.phone}<br/>
-    🌐 <a href="${cvData.github}" class="text-blue-500" target="_blank" rel="noopener noreferrer">GitHub</a> · 
-    <a href="${cvData.linkedin}" class="text-blue-500" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a href="${cvData.github}" class="text-blue-500 inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+      <i class="fab fa-github"></i> GitHub
+    </a> · 
+    <a href="${cvData.linkedin}" class="text-blue-500 inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+       <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
   `;
 
   document.getElementById("summary").innerHTML = `
@@ -25,12 +29,11 @@ function renderWebView(cvData) {
     div.innerHTML = `
       <h3 class="font-bold">${exp.role} – ${exp.company}</h3>
       <p class="text-sm text-gray-600">${exp.years}${exp.location ? " · " + exp.location : ""}</p>
-      ${
-        exp.bullets.length
-          ? `<ul class="list-disc list-inside text-sm mt-1">
+      ${exp.bullets.length
+        ? `<ul class="list-disc list-inside text-sm mt-1">
                ${exp.bullets.map(b => `<li>${b}</li>`).join("")}
              </ul>`
-          : ""
+        : ""
       }
     `;
     expEl.appendChild(div);
@@ -62,7 +65,7 @@ function renderWebView(cvData) {
     } else {
       li.textContent = cert.name;
     }
-    certEl.appendChild(li);
+    certEl.appendChild(li); 
   });
 }
 
