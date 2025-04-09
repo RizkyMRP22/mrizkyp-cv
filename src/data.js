@@ -36,10 +36,10 @@ I hold multiple certifications, including CTFL - ISTQB, ISM 1 & 2, and Google Da
       years: "Mar 2022 – Dec 2023",
       location: "Bandung, Indonesia",
       bullets: [
-        "Coordinator of QA Class",
-        "Prepare and teach materials for scheduled classes",
-        "Prepare and deliver practice and exams",
-        "Mentor and monitor students"
+        "Appointed as the QA Class Coordinator for the Industrial Class program in collaboration with Telkom Indonesia",
+        "Delivered both synchronous and asynchronous mentoring sessions for QA students, including internship guidance",
+        "Assessed student performance through exams, classroom activities and internship",
+        "Developed QA learning modules and final exam materials aligned with industry needs"
       ]
     },
     {
