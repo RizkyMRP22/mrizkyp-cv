@@ -8,6 +8,10 @@ function renderWebView(cvData) {
     <a href="${cvData.linkedin}" class="text-blue-500" target="_blank" rel="noopener noreferrer">LinkedIn</a>
   `;
 
+  document.getElementById("summary").innerHTML = `
+    <p>${cvData.summary}</p>
+  `;
+
   const expEl = document.getElementById("experiences");
   cvData.experiences.forEach(exp => {
     const div = document.createElement("div");
