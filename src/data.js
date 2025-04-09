@@ -100,9 +100,19 @@ I’m passionate about continuous learning and leveraging data-driven approaches
       desc: "AI assistant for B2B market profiling and sizing"
     },
     {
-      name: "MyTens",
+      name: "MyTens GoBeyond",
       link: "https://github.com/RizkyMRP22/mytens",
-      desc: "Gamified stress relief app with biofeedback and automation"
+      desc: "presales and Sales Funneling project in telkom"
+    },
+    {
+      name: "MyTens Care",
+      link: "https://github.com/RizkyMRP22/mytens",
+      desc: "After sales projecte in telkom"
+    },
+    {
+      name: "MyTens AMP",
+      link: "https://github.com/RizkyMRP22/mytens",
+      desc: "Approval management project"
     }
   ],
 
