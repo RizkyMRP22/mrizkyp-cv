@@ -19,7 +19,7 @@ function renderHeader({ name, location, email, phone, github, linkedin }) {
   });
 
   return `
-    <div style="position: fixed; top: 0; left: 0; padding: 10px; font-size: 10px; width: 100%;">
+    <div style="position: fixed; top: 0; left: 0; padding: 10px; font-size: 10px; width: 100%; z-index: 9999;">
       Downloaded: ${localTime}
     </div>
     <div style="margin-top: 40px;">
