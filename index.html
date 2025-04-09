@@ -80,7 +80,7 @@
 </head>
 
 <body class="bg-white text-gray-800 font-sans p-10">
-  <div id="access-time" class="fixed top-2 left-2 text-xs text-gray-500"></div>
+  <div id="access-time" class="fixed top-2 left-2 text-xs text-gray-500" data-testid="text-access-time"></div>
 
   <div id="loading-overlay" class="fixed inset-0 bg-white bg-opacity-75 z-50 flex items-center justify-center hidden">
     <div class="text-center">
@@ -95,7 +95,7 @@
   <!-- Responsive Button -->
   <!-- Wrapper Flex Container -->
   <div class="flex justify-end mb-4">
-    <button id="download-btn"
+    <button id="download-btn" data-testid="button-download"
       class="w-10 h-10 md:w-auto md:h-auto bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition flex items-center justify-center gap-2">
       <!-- Icon for mobile -->
       <i class="fa-solid fa-download block md:hidden text-lg"></i>
@@ -108,54 +108,54 @@
     <div class="hidden" id="cv-ats"></div>
 
     <header class="text-center mb-12">
-      <a id="profile-photo-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-block p-1 border-4 border-blue-200 rounded-full hover:border-blue-500 transition">
+      <a id="profile-photo-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-block p-1 border-4 border-blue-200 rounded-full hover:border-blue-500 transition" data-testid="link-profile-photo">
         <div class="rounded-full overflow-hidden w-32 h-32">
-          <img id="profile-photo" src="" alt="Profile Photo" class="w-full h-full object-cover" />
+          <img id="profile-photo" src="" alt="Profile Photo" class="w-full h-full object-cover" data-testid="image-profile-photo" />
         </div>
       </a>
-      <h1 id="name" class="text-4xl font-bold"></h1>
-      <p id="title" class="text-lg text-gray-600"></p>
-      <p id="contact" class="text-sm mt-2"></p>
+      <h1 id="name" class="text-4xl font-bold" data-testid="header-name"></h1>
+      <p id="title" class="text-lg text-gray-600" data-testid="text-title"></p>
+      <p id="contact" class="text-sm mt-2" data-testid="text-contact"></p>
     </header>
 
     <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center">📝 Summary
-        <button class="toggle-btn text-blue-500 text-sm">➖</button>
+      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center" data-testid="header-summary">📝 Summary
+        <button class="toggle-btn text-blue-500 text-sm" data-testid="button-toggle-summary">➖</button>
       </h2>
       <div id="summary" class="section-content"></div>
     </section>
 
     <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center">💼 Experience
-        <button class="toggle-btn text-blue-500 text-sm">➖</button>
+      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center" data-testid="header-experiences">💼 Experience
+        <button class="toggle-btn text-blue-500 text-sm" data-testid="button-toggle-experiences">➖</button>
       </h2>
       <div id="experiences" class="section-content"></div>
     </section>
 
     <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center">🎓 Education
-        <button class="toggle-btn text-blue-500 text-sm">➖</button>
+      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center" data-testid="header-education">🎓 Education
+        <button class="toggle-btn text-blue-500 text-sm" data-testid="button-toggle-education">➖</button>
       </h2>
       <div id="education" class="section-content"></div>
     </section>
 
     <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center">🛠️ Skills
-        <button class="toggle-btn text-blue-500 text-sm">➖</button>
+      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center" data-testid="header-skills">🛠️ Skills
+        <button class="toggle-btn text-blue-500 text-sm" data-testid="button-toggle-skills">➖</button>
       </h2>
       <div id="skills" class="text-sm section-content"></div>
     </section>
 
     <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center">📂 Projects
-        <button class="toggle-btn text-blue-500 text-sm">➖</button>
+      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center" data-testid="header-projects">📂 Projects
+        <button class="toggle-btn text-blue-500 text-sm" data-testid="button-toggle-projects">➖</button>
       </h2>
       <ul id="projects" class="list-disc list-inside text-sm section-content"></ul>
     </section>
 
     <section>
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center">📜 Certifications
-        <button class="toggle-btn text-blue-500 text-sm">➖</button>
+      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center" data-testid="header-certifications">📜 Certifications
+        <button class="toggle-btn text-blue-500 text-sm" data-testid="button-toggle-certifications">➖</button>
       </h2>
       <ul id="certifications" class="list-disc list-inside text-sm section-content"></ul>
     </section>
