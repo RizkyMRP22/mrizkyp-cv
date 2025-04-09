@@ -16,7 +16,11 @@ function renderPhoto(photoUrl) {
   photoImg.src = photoUrl;
   photoImg.style.maxWidth = "150px";
   photoImg.style.maxHeight = "150px";
-  document.getElementById("profile-photo-link").href = photoUrl;
+
+  const photoWrapper = document.getElementById("profile-photo-wrapper");
+  const photoLink = document.getElementById("profile-photo-link");
+  photoLink.href = photoUrl;
+  photoLink.appendChild(photoWrapper);
 }
 
 function renderContactSection(cvData) {
