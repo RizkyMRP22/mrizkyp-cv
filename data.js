@@ -4,7 +4,7 @@ const cvData = {
   location: "Jakarta, Indonesia",
   email: "rizkymrp22@gmail.com",
   phone: "081350672619", // Optional: Bisa kamu isi jika ingin ditampilkan
-  github: "https://github.com/RizkyMRP22", // Tambahan opsional
+  github: "https://github.com/rizkymrp22", // Tambahan opsional
   linkedin: "https://www.linkedin.com/in/mrizkyp22",
 
   summary: `As a Software Quality Assurance Engineer with over five years of experience, I’ve worked on diverse and challenging projects, ensuring top-tier software delivery. 
@@ -30,7 +30,7 @@ I’m passionate about continuous learning and leveraging data-driven approaches
       role: "Industrial Lecturer",
       company: "Telkom University",
       years: "Mar 2022 – Dec 2023",
-      location: "Indonesia",
+      location: "Bandung, Indonesia",
       bullets: [
         "Coordinator of QA Class",
         "Prepare and teach materials for scheduled classes",
