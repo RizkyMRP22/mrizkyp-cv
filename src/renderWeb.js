@@ -9,7 +9,9 @@ function renderWebView(cvData) {
   document.getElementById("name").textContent = cvData.name;
   document.getElementById("title").textContent = cvData.title;
   document.getElementById("contact").innerHTML = `
-    📍 ${cvData.location} · 📧 ${cvData.email} · 📞 ${cvData.phone}<br/>
+    📍 ${cvData.location} <br/> 
+    ✉️ <a href="mailto:${cvData.email}" class="text-blue-500">${cvData.email}</a> · 
+    📞 <a href="https://wa.me/${cvData.phone.replace(/[^0-9]/g, '')}" class="text-green-500" target="_blank" rel="noopener noreferrer">${cvData.phone}</a><br/>
     <a href="${cvData.github}" class="text-blue-500 inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-github"></i> GitHub
     </a> · 
