@@ -14,7 +14,7 @@ function renderWebView(cvData) {
     : cleanedPhone;
   document.getElementById("contact").innerHTML = `
     📍 ${cvData.location} <br/> 
-    ✉️ <span class="text-blue-500 cursor-pointer" onclick="navigator.clipboard.writeText('${cvData.email}').then(() => alert('Email copied!'))">${cvData.email}</span> · 
+    ✉️ <span class="text-black-500 cursor-pointer" title="Copy email" onclick="navigator.clipboard.writeText('${cvData.email}').then(() => alert('Email copied!'))">${cvData.email}</span> · 
     📞 <a href="https://wa.me/${whatsappPhone}" class="text-green-500" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a><br/>
     <a href="${cvData.github}" class="text-blue-500 inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-github"></i> GitHub
