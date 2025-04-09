@@ -85,3 +85,15 @@ function renderCertifications(certifications) {
     </ul>
   `;
 }
+
+function addPaginationFooter() {
+  const footer = document.createElement("div");
+  footer.style.position = "fixed";
+  footer.style.bottom = "0";
+  footer.style.right = "10px";
+  footer.style.fontSize = "10px";
+  footer.style.textAlign = "right";
+  footer.style.zIndex = "9999";
+  footer.innerHTML = "Page <span class='pageNumber'></span> of <span class='totalPages'></span>";
+  document.body.appendChild(footer);
+}
