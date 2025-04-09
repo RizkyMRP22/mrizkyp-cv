@@ -33,12 +33,12 @@ function renderContactSection(cvData) {
   const whatsappPhone = cleanedPhone.startsWith('08') ? '62' + cleanedPhone.slice(1) : cleanedPhone;
   document.getElementById("contact").innerHTML = `
     📍 ${cvData.location} <br/> 
-    ✉️ <span class="text-black-500 cursor-pointer" title="Copy email" onclick="navigator.clipboard.writeText('${cvData.email}').then(() => alert('Email copied!'))">${cvData.email}</span> · 
-    📞 <a href="https://wa.me/${whatsappPhone}" class="text-green-500" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a><br/>
-    <a href="${cvData.github}" class="text-blue-500 inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+    ✉️ <span class="text-black-500 cursor-pointer hover:underline hover:text-blue-500 transition-colors duration-150" title="Copy email" onclick="navigator.clipboard.writeText('${cvData.email}').then(() => alert('Email copied!'))">${cvData.email}</span> · 
+    📞 <a href="https://wa.me/${whatsappPhone}" class="text-green-500 hover:underline hover:text-green-600 transition-colors duration-150" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a><br/>
+    <a href="${cvData.github}" class="text-blue-500 inline-flex items-center gap-1 hover:underline hover:text-blue-600 transition-colors duration-150" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-github"></i> GitHub
     </a> · 
-    <a href="${cvData.linkedin}" class="text-blue-500 inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+    <a href="${cvData.linkedin}" class="text-blue-500 inline-flex items-center gap-1 hover:underline hover:text-blue-600 transition-colors duration-150" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-linkedin"></i> LinkedIn
     </a>
   `;
@@ -90,14 +90,25 @@ function renderProjectsSection(projects) {
 function renderCertificationsSection(certifications) {
   const certEl = document.getElementById("certifications");
   certEl.innerHTML = '';
+
   certifications.forEach(cert => {
+    if (!cert.name || cert.name.trim() === "") return;
+
+    const details = [
+      cert.name.trim(),
+      cert.provider?.trim(),
+      cert.years?.trim()
+    ].filter(Boolean).join(" – "); // Combine only non-empty parts
+
     const li = document.createElement("li");
-    if (cert.link && cert.link.startsWith("http")) {
-      li.innerHTML = `<a href="${cert.link}" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">${cert.name}</a>`;
+
+    if (cert.link && cert.link.trim() !== "" && cert.link.startsWith("http")) {
+      li.innerHTML = `<a href="${cert.link}" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">${details}</a>`;
     } else {
-      li.textContent = cert.name;
+      li.textContent = details;
     }
-    certEl.appendChild(li); 
+
+    certEl.appendChild(li);
   });
 }
 

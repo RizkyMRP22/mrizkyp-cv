@@ -1,19 +1,15 @@
 const cvData = {
-  // photo: "https://drive.google.com/uc?export=view&id=1KlQbLXBsl57Kfl2C8kNswk8nrcZUyynw",
   photo: "https://github.com/RizkyMRP22/mrizkyp-cv/blob/main/assets/image.png?raw=true",
   name: "Mohammad Rizky Pratama",
   title: "Technical Lead & QA Engineer at Telkom Indonesia | CTFL - ISTQB",
   location: "Jakarta, Indonesia",
   email: "rizkymrp22@gmail.com",
-  phone: "081350672619", // Optional: Bisa kamu isi jika ingin ditampilkan
-  github: "https://github.com/rizkymrp22", // Tambahan opsional
+  phone: "081350672619",
+  github: "https://github.com/rizkymrp22",
   linkedin: "https://www.linkedin.com/in/mrizkyp22",
 
-  summary: `I'm a Technical Lead and QA Engineer at Telkom Indonesia with over 5 years of experience ensuring high-quality software delivery across various platforms. I have a strong background in test automation (Katalon, Postman, JMeter), CI/CD (Jenkins), and infrastructure testing. 
-
-Alongside my technical role, I’ve contributed as an Industrial Lecturer at Telkom University, coordinating and mentoring QA students.
-
-I hold multiple certifications, including CTFL - ISTQB, ISM 1 & 2, and Google Data Analytics. Passionate about quality, continuous improvement, and using data-driven approaches to enhance software development.`,
+  summary: `\tI'm a Technical Lead and QA Engineer at Telkom Indonesia with over 5 years of experience ensuring high-quality software delivery across various platforms. I have a strong background in test automation (Katalon, Postman, JMeter), CI/CD (Jenkins), and infrastructure testing.
+\tAlongside my technical role, I’ve contributed as an Industrial Lecturer at Telkom University, coordinating and mentoring QA students. \tI hold multiple certifications, including CTFL - ISTQB, ISM 1 & 2, and Google Data Analytics. Passionate about quality, continuous improvement, and using data-driven approaches to enhance software development.`,
 
   experiences: [
     {
@@ -81,7 +77,7 @@ I hold multiple certifications, including CTFL - ISTQB, ISM 1 & 2, and Google Da
 
   skills: {
     languages: ["JavaScript", "TypeScript", "Python"],
-    frameworks: ["React", "Next.js", "Node.js"],
+    frameworks: [ "Node.js", "Playwright.JS"],
     tools: [
       "Katalon Studio",
       "JMeter",
@@ -91,7 +87,9 @@ I hold multiple certifications, including CTFL - ISTQB, ISM 1 & 2, and Google Da
       "Jenkins CI",
       "Docker",
       "Git",
-      "Firebase"
+      "Firebase",
+      "SQL",
+      "NoSQL"
     ]
   },
 
@@ -120,24 +118,46 @@ I hold multiple certifications, including CTFL - ISTQB, ISM 1 & 2, and Google Da
 
   certifications: [
     {
+      name: "Certified ISTQB® Test Analyst Advanced Level (CTAL-TA)",
+      provider: "",
+      link: "https://digilearn.udemy.com/certificate/UC-625b73c1-c112-4a91-8302-763d7967fa8b/",
+      years: "2024"
+    },
+    {
       name: "Certified Indonesia Scrum Master (ISM) 1",
-      link: ""
+      provider: "EKIPA",
+      link: "https://drive.google.com/file/d/1OXEBQ3lSmikFh9BFl1Y5A1xT6bG4Cokd/view?usp=sharing",
+      years: "2020"
     },
     {
       name: "Certified Indonesia Scrum Master (ISM) 2",
-      link: ""
+      provider:"EKIPA",
+      link: "https://drive.google.com/file/d/1pGWhDOxxhIgFrxwGoNhMVbu78fTOEgws/view?usp=sharing",
+      years: "2021"
     },
     {
       name: "Katalon Studio - Step by Step for Beginners",
-      link: ""
+      provider: "Udemy",
+      link: "",
+      years: ""
     },
     {
-      name: "Google Data Analytics – Coursera",
-      link: ""
+      name: "Google Data Analytics",
+      provider:"Coursera",
+      link: "https://www.coursera.org/account/accomplishments/specialization/certificate/D3A8DKD9QQSC",
+      years: "2023"
     },
     {
-      name: "Certified Tester Foundation Level (CTFL) – ISTQB",
-      link: "http://scr.istqb.org/?name=Mohammad+Rizky+Pratama&number=21-CTFL-187617-12&orderBy=relevancy&orderDirection=&dateStart=&dateEnd=&expiryStart=&expiryEnd=&certificationBody=&examProvider=&certificationLevel=&country=&resultsPerPage=10"
-    }
+      name: "Certified Tester Foundation Level (CTFL)",
+      provider: "ISTQB",
+      link: "http://scr.istqb.org/?name=Mohammad+Rizky+Pratama&number=21-CTFL-187617-12&orderBy=relevancy&orderDirection=&dateStart=&dateEnd=&expiryStart=&expiryEnd=&certificationBody=&examProvider=&certificationLevel=&country=&resultsPerPage=10",
+      years: "2021"
+    },
+    {
+      name: "Continuous Delivery and Devops",
+      provider:"coursera",
+      link: "",
+      years: "2021"
+    },
   ]
 };
