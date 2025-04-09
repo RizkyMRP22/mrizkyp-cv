@@ -1,6 +1,13 @@
 function renderATSView(cvData) {
   const ats = document.getElementById("cv-ats");
+  const now = new Date();
+  const localTime = now.toLocaleString('en-GB', {
+    hour12: false,
+    timeZoneName: 'short'
+  });
+
   ats.innerHTML = `
+    <div style="font-size: 10px; text-align: left;">Downloaded: ${localTime}</div>
     ${renderHeader(cvData)}
     ${renderSummary(cvData.summary)}
     ${renderExperience(cvData.experiences)}
