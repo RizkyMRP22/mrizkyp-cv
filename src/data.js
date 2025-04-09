@@ -97,21 +97,21 @@ I’m passionate about continuous learning and leveraging data-driven approaches
     {
       name: "MyIndiBiz Assistant",
       link: "https://github.com/RizkyMRP22/myindibiz-assistant",
-      desc: "AI assistant for B2B market profiling and sizing"
+      desc: "Assistant for B2B market profiling and sizing"
     },
     {
       name: "MyTens GoBeyond",
-      link: "https://github.com/RizkyMRP22/mytens",
-      desc: "presales and Sales Funneling project in telkom"
+      link: "https://newgobeyond.mytens.co.id/",
+      desc: "Presales and Sales Funneling project in telkom"
     },
     {
       name: "MyTens Care",
-      link: "https://github.com/RizkyMRP22/mytens",
+      link: "https://care.mytens.co.id/",
       desc: "After sales projecte in telkom"
     },
     {
       name: "MyTens AMP",
-      link: "https://github.com/RizkyMRP22/mytens",
+      link: "https://cms.mytens.co.id/",
       desc: "Approval management project"
     }
   ],
