@@ -19,14 +19,14 @@ function renderHeader({ name, location, email, phone, github, linkedin }) {
   });
 
   return `
-    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-      <div style="font-size: 10px;">Downloaded: ${localTime}</div>
-      <div>
-        <h1>${name}</h1>
-        <p>${location} | ${email}${phone ? ' | ' + phone : ''}</p>
-        <p>GitHub: <em>${github}</em></p>
-        <p>LinkedIn: <em>${linkedin}</em></p>
-      </div>
+    <div style="position: fixed; top: 0; left: 0; padding: 10px; font-size: 10px; width: 100%;">
+      Downloaded: ${localTime}
+    </div>
+    <div style="margin-top: 40px;">
+      <h1>${name}</h1>
+      <p>${location} | ${email}${phone ? ' | ' + phone : ''}</p>
+      <p>GitHub: <em>${github}</em></p>
+      <p>LinkedIn: <em>${linkedin}</em></p>
     </div>
   `;
 }
