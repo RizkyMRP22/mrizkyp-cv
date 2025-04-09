@@ -1,5 +1,4 @@
 const cvData = {
-  // photo: "https://drive.google.com/uc?export=view&id=1KlQbLXBsl57Kfl2C8kNswk8nrcZUyynw",
   photo: "https://github.com/RizkyMRP22/mrizkyp-cv/blob/main/assets/image.png?raw=true",
   name: "Mohammad Rizky Pratama",
   title: "Technical Lead & QA Engineer at Telkom Indonesia | CTFL - ISTQB",
@@ -10,10 +9,7 @@ const cvData = {
   linkedin: "https://www.linkedin.com/in/mrizkyp22",
 
   summary: `I'm a Technical Lead and QA Engineer at Telkom Indonesia with over 5 years of experience ensuring high-quality software delivery across various platforms. I have a strong background in test automation (Katalon, Postman, JMeter), CI/CD (Jenkins), and infrastructure testing. 
-
-Alongside my technical role, I’ve contributed as an Industrial Lecturer at Telkom University, coordinating and mentoring QA students.
-
-I hold multiple certifications, including CTFL - ISTQB, ISM 1 & 2, and Google Data Analytics. Passionate about quality, continuous improvement, and using data-driven approaches to enhance software development.`,
+  Alongside my technical role, I’ve contributed as an Industrial Lecturer at Telkom University, coordinating and mentoring QA students. I hold multiple certifications, including CTFL - ISTQB, ISM 1 & 2, and Google Data Analytics. Passionate about quality, continuous improvement, and using data-driven approaches to enhance software development.`,
 
   experiences: [
     {
