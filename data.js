@@ -1,4 +1,5 @@
 const cvData = {
+  photo:"https://drive.google.com/file/d/1KlQbLXBsl57Kfl2C8kNswk8nrcZUyynw/view?usp=sharing",
   name: "Mohammad Rizky Pratama",
   title: "Technical Lead & QA Engineer at Telkom Indonesia | CTFL - ISTQB",
   location: "Jakarta, Indonesia",
