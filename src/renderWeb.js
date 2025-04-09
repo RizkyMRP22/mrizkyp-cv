@@ -8,10 +8,14 @@ function renderWebView(cvData) {
   photoLink.href = cvData.photo;
   document.getElementById("name").textContent = cvData.name;
   document.getElementById("title").textContent = cvData.title;
+  const cleanedPhone = cvData.phone.replace(/[^0-9]/g, '');
+  const whatsappPhone = cleanedPhone.startsWith('08')
+    ? '62' + cleanedPhone.slice(1)
+    : cleanedPhone;
   document.getElementById("contact").innerHTML = `
     📍 ${cvData.location} <br/> 
     ✉️ <a href="mailto:${cvData.email}" class="text-blue-500">${cvData.email}</a> · 
-    📞 <a href="https://wa.me/${cvData.phone.replace(/[^0-9]/g, '')}" class="text-green-500" target="_blank" rel="noopener noreferrer">${cvData.phone}</a><br/>
+    📞 <a href="https://wa.me/${whatsappPhone}" class="text-green-500" target="_blank" rel="noopener noreferrer">${cvData.phone}</a><br/>
     <a href="${cvData.github}" class="text-blue-500 inline-flex items-center gap-1" target="_blank" rel="noopener noreferrer">
       <i class="fab fa-github"></i> GitHub
     </a> · 
