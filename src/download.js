@@ -1,6 +1,12 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("download-btn");
+  const now = new Date();
+  const localTime = now.toLocaleString('en-GB', {
+    hour12: false,
+    timeZoneName: 'short'
+  });
+
   if (btn) {
     btn.addEventListener("click", () => {
       renderATSView(cvData);
@@ -9,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const opt = {
         margin:       10,
-        filename:     "Rizky_MRP_CV_ATS.pdf",
+        filename:     `mrizkyp_cv_${localTime}.pdf`,
         image:        { type: "jpeg", quality: 0.98 },
         html2canvas:  { scale: 3, useCORS: true },
         jsPDF:        { unit: "mm", format: "a4", orientation: "portrait" },

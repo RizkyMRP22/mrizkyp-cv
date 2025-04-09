@@ -1,13 +1,6 @@
 function renderATSView(cvData) {
   const ats = document.getElementById("cv-ats");
-  const now = new Date();
-  const localTime = now.toLocaleString('en-GB', {
-    hour12: false,
-    timeZoneName: 'short'
-  });
-
   ats.innerHTML = `
-    <div style="font-size: 10px; text-align: left;">Downloaded: ${localTime}</div>
     ${renderHeader(cvData)}
     ${renderSummary(cvData.summary)}
     ${renderExperience(cvData.experiences)}
@@ -19,22 +12,11 @@ function renderATSView(cvData) {
 }
 
 function renderHeader({ name, location, email, phone, github, linkedin }) {
-  const now = new Date();
-  const localTime = now.toLocaleString('en-GB', {
-    hour12: false,
-    timeZoneName: 'short'
-  });
-
   return `
-    <div style="position: fixed; top: 0; left: 0; padding: 10px; font-size: 10px; width: 100%; z-index: 9999;">
-      Downloaded: ${localTime}
-    </div>
-    <div style="margin-top: 40px;">
       <h1>${name}</h1>
       <p>${location} | ${email}${phone ? ' | ' + phone : ''}</p>
       <p>GitHub: <em>${github}</em></p>
       <p>LinkedIn: <em>${linkedin}</em></p>
-    </div>
   `;
 }
 
@@ -85,22 +67,10 @@ function renderCertifications(certifications) {
     <h2>Certifications</h2>
     <ul>
       ${certifications.map(cert =>
-        cert.link && cert.link.startsWith("http")
-          ? `<li><a href="${cert.link}" target="_blank" rel="noopener noreferrer"><em>${cert.name}</em></a></li>`
-          : `<li>${cert.name}</li>`
-      ).join("")}
+    cert.link && cert.link.startsWith("http")
+      ? `<li><a href="${cert.link}" target="_blank" rel="noopener noreferrer"><em>${cert.name}</em></a></li>`
+      : `<li>${cert.name}</li>`
+  ).join("")}
     </ul>
   `;
-}
-
-function addPaginationFooter() {
-  const footer = document.createElement("div");
-  footer.style.position = "fixed";
-  footer.style.bottom = "0";
-  footer.style.right = "10px";
-  footer.style.fontSize = "10px";
-  footer.style.textAlign = "right";
-  footer.style.zIndex = "9999";
-  footer.innerHTML = "Page <span class='pageNumber'></span> of <span class='totalPages'></span>";
-  document.body.appendChild(footer);
 }
