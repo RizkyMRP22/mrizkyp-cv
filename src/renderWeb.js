@@ -13,14 +13,19 @@ function renderWebView(cvData) {
 
 function renderPhoto(photoUrl) {
   const photoImg = document.getElementById("profile-photo");
-  photoImg.src = photoUrl;
-  photoImg.style.maxWidth = "150px";
-  photoImg.style.maxHeight = "150px";
-
   const photoWrapper = document.getElementById("profile-photo-wrapper");
   const photoLink = document.getElementById("profile-photo-link");
-  photoLink.href = photoUrl;
-  photoLink.appendChild(photoWrapper);
+
+  if (photoImg) {
+    photoImg.src = photoUrl;
+    photoImg.style.maxWidth = "150px";
+    photoImg.style.maxHeight = "150px";
+  }
+
+  if (photoWrapper && photoLink && !photoLink.contains(photoWrapper)) {
+    photoLink.href = photoUrl;
+    photoLink.appendChild(photoWrapper);
+  }
 }
 
 function renderContactSection(cvData) {
