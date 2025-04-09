@@ -1,27 +1,35 @@
 # 🌐 Rizky MRP – Dynamic CV
 
-This is a dynamic and web-based Curriculum Vitae (CV) built using HTML, Tailwind CSS, and JavaScript.  
-All CV content is managed in a separate `data.js` file, making it easy to update information without touching the layout.
+A modern, interactive, and responsive Curriculum Vitae (CV) designed using **HTML**, **Tailwind CSS**, and **JavaScript**.  
+This CV is dynamically populated from a single `data.js` file, making updates seamless without modifying the HTML layout directly.
 
-🔗 **View Live CV**: [https://rizkymrp22.github.io/mrizkyp-cv](https://rizkymrp22.github.io/mrizkyp-cv)
+🔗 **Live Demo**: [View My CV](https://rizkymrp22.github.io/mrizkyp-cv)
 
 ---
 
 ## ✨ Features
 
-- ⚡ Dynamic data loading via `data.js`
-- 🎨 Clean and responsive layout with Tailwind CSS
-- 🔄 Easy to update and maintain
-- 🌍 Hosted with GitHub Pages
+- ⚡ Dynamic content rendering powered by `data.js`
+- 🎨 Clean, responsive design using Tailwind CSS
+- 🛠️ Easily customizable layout and styling
+- 📤 One-click download functionality
+- 🌐 Deployable to GitHub Pages with no backend needed
 
 ---
 
-## 🗂️ File Structure
+## 🗂️ Project Structure
 
-```bash
+```
 mrizkyp-cv/
-├── index.html       # Main layout template
-├── data.js          # All CV information (name, work history, etc.)
-├── main.js          # Script to inject CV data into the HTML layout
-├── style.css        # (Optional) Additional styles
-└── README.md        # This file
+├── assets/
+│   └── image.png           # Static image used in the CV
+├── src/
+│   ├── data.js             # Personal and professional details
+│   ├── download.js         # Logic to download the CV
+│   ├── main.js             # Entry point to initialize the rendering
+│   ├── renderATS.js        # Renders ATS-specific format
+│   └── renderWeb.js        # Renders Web-specific layout
+├── index.html              # Main HTML template
+├── .gitignore
+├── README.md               # Project documentation
+```
