@@ -72,6 +72,7 @@
 </head>
 
 <body class="bg-white text-gray-800 font-sans p-10">
+  <div id="access-time" class="fixed top-2 left-2 text-xs text-gray-500"></div>
 
   <div id="loading-overlay" class="fixed inset-0 bg-white bg-opacity-75 z-50 flex items-center justify-center hidden">
     <div class="text-center">
@@ -159,6 +160,13 @@
   <script src="./src/download.js?v=1.0.1" defer></script>
 
   <script>
+    const accessTimeElement = document.getElementById("access-time");
+    if (accessTimeElement) {
+      const now = new Date();
+      const formatted = now.toISOString().replace("T", " ").slice(0, 19) + " UTC";
+      accessTimeElement.textContent = "Accessed: " + formatted;
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll(".toggle-btn").forEach(btn => {
         btn.addEventListener("click", () => {
