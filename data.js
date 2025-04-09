@@ -18,7 +18,12 @@ I’m passionate about continuous learning and leveraging data-driven approaches
       years: "Jul 2024 – Present",
       location: "Jakarta, Indonesia",
       bullets: [
-        "Supporting development tools (MyTens Lite & MyIndibiz Assistant) for Regional teams"
+        "Analyzed business needs and translated them into detailed technical requirements",
+        "Defined technical specifications aligned with customer profiling and market sizing objectives",
+        "Identified and assigned appropriate team resources",
+        "Collaborated with UI/UX Designers to create intuitive interfaces based on business workflows",
+        "Developed and managed a realistic implementation timeline using agile methodology",
+        "Led sprint planning and progress tracking to ensure timely delivery and alignment with business goals"
       ]
     },
     {
