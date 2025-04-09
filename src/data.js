@@ -9,9 +9,11 @@ const cvData = {
   github: "https://github.com/rizkymrp22", // Tambahan opsional
   linkedin: "https://www.linkedin.com/in/mrizkyp22",
 
-  summary: `As a Software Quality Assurance Engineer with over five years of experience, I’ve worked on diverse and challenging projects, ensuring top-tier software delivery. 
-In addition to this, I serve as an Industrial Lecturer at Telkom University. I'm a CTFL-certified QA professional, an ISM 1 & 2 certified Scrum Master, and a Google Data Analytics certificate holder.
-I’m passionate about continuous learning and leveraging data-driven approaches in quality assurance.`,
+  summary: `I'm a Technical Lead and QA Engineer at Telkom Indonesia with over 5 years of experience ensuring high-quality software delivery across various platforms. I have a strong background in test automation (Katalon, Postman, JMeter), CI/CD (Jenkins), and infrastructure testing. 
+
+Alongside my technical role, I’ve contributed as an Industrial Lecturer at Telkom University, coordinating and mentoring QA students.
+
+I hold multiple certifications, including CTFL - ISTQB, ISM 1 & 2, and Google Data Analytics. Passionate about quality, continuous improvement, and using data-driven approaches to enhance software development.`,
 
   experiences: [
     {
@@ -78,7 +80,7 @@ I’m passionate about continuous learning and leveraging data-driven approaches
   },
 
   skills: {
-    languages: ["JavaScript", "TypeScript","Python"],
+    languages: ["JavaScript", "TypeScript", "Python"],
     frameworks: ["React", "Next.js", "Node.js"],
     tools: [
       "Katalon Studio",
@@ -118,24 +120,24 @@ I’m passionate about continuous learning and leveraging data-driven approaches
 
   certifications: [
     {
-      name:"Certified Indonesia Scrum Master (ISM) 1",
-      link:""
+      name: "Certified Indonesia Scrum Master (ISM) 1",
+      link: ""
     },
     {
-      name:"Certified Indonesia Scrum Master (ISM) 2",
-      link:""
+      name: "Certified Indonesia Scrum Master (ISM) 2",
+      link: ""
     },
     {
-      name:"Katalon Studio - Step by Step for Beginners",
-      link:""
+      name: "Katalon Studio - Step by Step for Beginners",
+      link: ""
     },
     {
-      name:"Google Data Analytics – Coursera",
-      link:""
+      name: "Google Data Analytics – Coursera",
+      link: ""
     },
     {
-      name:"Certified Tester Foundation Level (CTFL) – ISTQB",
-      link:"http://scr.istqb.org/?name=Mohammad+Rizky+Pratama&number=21-CTFL-187617-12&orderBy=relevancy&orderDirection=&dateStart=&dateEnd=&expiryStart=&expiryEnd=&certificationBody=&examProvider=&certificationLevel=&country=&resultsPerPage=10"
-    } 
+      name: "Certified Tester Foundation Level (CTFL) – ISTQB",
+      link: "http://scr.istqb.org/?name=Mohammad+Rizky+Pratama&number=21-CTFL-187617-12&orderBy=relevancy&orderDirection=&dateStart=&dateEnd=&expiryStart=&expiryEnd=&certificationBody=&examProvider=&certificationLevel=&country=&resultsPerPage=10"
+    }
   ]
 };
