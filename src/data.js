@@ -67,7 +67,7 @@ const cvData = {
       ]
     },
     {
-      role: "QA Engineer (Internship)",
+      role: "Software Quality Assurance Engineer (Internship)",
       company: "Telkom Indonesia",
       years: "Jul 2018 – Dec 2018",
       location: "Bandung, Indonesia",
