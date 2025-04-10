@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (btn) {
     btn.addEventListener("click", () => {
+      const overlay = document.getElementById("loading-overlay");
+      overlay.classList.remove("hidden");
       renderATSView(cvData);
       const atsElement = document.getElementById("cv-ats");
       atsElement.classList.remove("hidden");
@@ -22,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       };
 
       html2pdf().set(opt).from(atsElement).save().then(() => {
+        overlay.classList.add("hidden");
         atsElement.classList.add("hidden");
       });
     });

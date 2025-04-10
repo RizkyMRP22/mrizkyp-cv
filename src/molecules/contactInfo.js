@@ -14,7 +14,7 @@ export function renderContactSection(cvData) {
   
       <a href="https://wa.me/${whatsappPhone}" class="text-green-500 inline-flex items-center gap-1 hover:underline hover:text-green-600 transition-colors duration-150"
         title="Open WhatsApp" target="_blank" rel="noopener noreferrer" data-testid="link-whatsapp">
-        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        <i class="fab fa-whatsapp"></i> Chat Me
       </a><br/>
   
       <a href="${cvData.github}" class="text-blue-500 inline-flex items-center gap-1 hover:underline hover:text-blue-600 transition-colors duration-150"

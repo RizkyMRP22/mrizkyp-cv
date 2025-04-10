@@ -26,6 +26,9 @@ export function renderATSView(cvData) {
       <p><strong>Languages:</strong> ${cvData.skills.languages.join(", ")}</p>
       <p><strong>Frameworks:</strong> ${cvData.skills.frameworks.join(", ")}</p>
       <p><strong>Tools:</strong> ${cvData.skills.tools.join(", ")}</p>
+
+      <h2>PROJECTS</h2>
+      <ul>${cvData.projects.map(p => `<li><strong>${p.name}:</strong> ${p.desc}</li>`).join("")}</ul>
   
       <h2>CERTIFICATIONS & COURSES</h2>
       <ul>

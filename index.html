@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./assets/ats.css" />
 
-  <!-- External Scripts -->
+  <!-- html2pdf.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
@@ -49,19 +49,8 @@
     <div id="certifications"></div>
   </main>
 
-  <!-- Entry Script -->
-  <script type="module">
-    import { renderWebView } from './src/organisms/renderWebView.js';
-    import { cvData } from './src/data.js';
-    import './src/atoms/timestamp.js';
-    import { initializeToggleButtons } from './src/atoms/toggleSection.js';
-    import './src/organisms/download.js';
-
-    window.onload = () => {
-      renderWebView(cvData);
-      initializeToggleButtons();
-    };
-  </script>
+  <!-- ✅ Unified entry point for all JS -->
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

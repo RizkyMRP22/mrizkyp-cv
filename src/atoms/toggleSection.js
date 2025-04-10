@@ -4,7 +4,7 @@ export function initializeToggleButtons() {
     btn.addEventListener("click", () => {
       const content = btn.parentElement.nextElementSibling;
       content.classList.toggle("hidden");
-      btn.textContent = content.classList.contains("hidden") ? "➕" : "➖";
+      btn.textContent = content.classList.contains("hidden") ? "▼" : "▲";
     });
   });
 }
