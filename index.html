@@ -5,206 +5,62 @@
   <meta charset="utf-8" />
   <title>Profile of MRizkyP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
 
-  <!-- Tailwind CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css?v=1.0.1" rel="stylesheet" />
+  <!-- External Styles -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/ats.css" />
 
-  <!-- html2pdf -->
+  <!-- External Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
-  <!-- Font Awesome for download icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <style>
-    #cv-ats {
-      width: 100%;
-      max-width: 210mm;
-      padding: 20mm;
-      font-family: Arial, sans-serif;
-      font-size: 12pt;
-      line-height: 1.6;
-      color: #000;
-      background-color: #fff;
-    }
-
-    #cv-ats h1 {
-      font-size: 22pt;
-      font-weight: bold;
-      margin-bottom: 10pt;
-    }
-
-    #cv-ats h2 {
-      font-size: 16pt;
-      font-weight: bold;
-      margin-top: 20pt;
-      margin-bottom: 8pt;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 4pt;
-      page-break-after: avoid;
-    }
-
-    #cv-ats p {
-      text-align: justify;
-    }
-
-    #cv-ats li {
-      margin: 4pt 0;
-      font-size: 12pt;
-      font-weight: normal;
-      text-align: justify;
-      page-break-inside: avoid;
-    }
-
-    #cv-ats ul {
-      margin-left: 20pt;
-    }
-
-    #cv-ats em-i {
-      font-style: italic;
-      font-size: 10pt;
-    }
-
-    #cv-ats em {
-      font-style: italic;
-    }
-
-    .page-break {
-      page-break-before: always;
-      break-before: page;
-    }
-  </style>
 </head>
 
 <body class="bg-white text-gray-800 font-sans p-10">
-  <div id="access-time" class="fixed top-2 left-2 text-xs text-gray-500" data-testid="text-access-time"></div>
+  <div id="access-time" class="fixed top-2 left-2 text-xs text-gray-500"></div>
 
+  <!-- Loading Overlay -->
   <div id="loading-overlay" class="fixed inset-0 bg-white bg-opacity-75 z-50 flex items-center justify-center hidden">
     <div class="text-center">
       <svg class="animate-spin h-8 w-8 text-blue-600 mx-auto mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
       </svg>
-      <p class="text-blue-700 text-sm font-medium">Downloding CV...</p>
+      <p class="text-blue-700 text-sm font-medium">Downloading CV...</p>
     </div>
   </div>
 
-  <!-- Responsive Button -->
-  <!-- Wrapper Flex Container -->
+  <!-- Download Button -->
   <div class="flex justify-end mb-4">
-    <button id="download-btn" data-testid="button-download"
-      class="w-10 h-10 md:w-auto md:h-auto bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition flex items-center justify-center gap-2">
-      <!-- Icon for mobile -->
+    <button id="download-btn" class="w-10 h-10 md:w-auto md:h-auto bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition flex items-center justify-center gap-2">
       <i class="fa-solid fa-download block md:hidden text-lg"></i>
-      <!-- Text for desktop -->
       <span class="hidden md:inline">Download CV</span>
     </button>
   </div>
 
-  <div id="cv-content">
-    <div class="hidden" id="cv-ats"></div>
+  <!-- Main Content -->
+  <main id="cv-content">
+    <div id="cv-ats" class="hidden"></div>
+    <div id="profile"></div>
+    <div id="summary"></div>
+    <div id="experiences"></div>
+    <div id="education"></div>
+    <div id="skills"></div>
+    <div id="projects"></div>
+    <div id="certifications"></div>
+  </main>
 
-    <header class="text-center mb-12">
-      <a id="profile-photo-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-block p-1 border-4 border-blue-200 rounded-full hover:border-blue-500 transition" data-testid="link-profile-photo">
-        <div class="rounded-full overflow-hidden w-32 h-32">
-          <img id="profile-photo" src="" alt="Profile Photo" class="w-full h-full object-cover" data-testid="image-profile-photo" />
-        </div>
-      </a>
-      <h1 id="name" class="text-4xl font-bold" data-testid="header-name"></h1>
-      <p id="title" class="text-lg text-gray-600" data-testid="text-title"></p>
-      <p id="contact" class="text-sm mt-2" data-testid="text-contact"></p>
-    </header>
+  <!-- Entry Script -->
+  <script type="module">
+    import { renderWebView } from './src/organisms/renderWebView.js';
+    import { cvData } from './src/data.js';
+    import './src/atoms/timestamp.js';
+    import { initializeToggleButtons } from './src/atoms/toggleSection.js';
+    import './src/organisms/download.js';
 
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center" data-testid="header-summary">📝 Summary
-        <button class="toggle-btn text-blue-500 text-sm" data-testid="button-toggle-summary">➖</button>
-      </h2>
-      <div id="summary" class="section-content"></div>
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center" data-testid="header-experiences">💼 Experience
-        <button class="toggle-btn text-blue-500 text-sm" data-testid="button-toggle-experiences">➖</button>
-      </h2>
-      <div id="experiences" class="section-content"></div>
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center" data-testid="header-education">🎓 Education
-        <button class="toggle-btn text-blue-500 text-sm" data-testid="button-toggle-education">➖</button>
-      </h2>
-      <div id="education" class="section-content"></div>
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center" data-testid="header-skills">🛠️ Skills
-        <button class="toggle-btn text-blue-500 text-sm" data-testid="button-toggle-skills">➖</button>
-      </h2>
-      <div id="skills" class="text-sm section-content"></div>
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center" data-testid="header-projects">📂 Projects
-        <button class="toggle-btn text-blue-500 text-sm" data-testid="button-toggle-projects">➖</button>
-      </h2>
-      <ul id="projects" class="list-disc list-inside text-sm section-content"></ul>
-    </section>
-
-    <section>
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4 flex justify-between items-center" data-testid="header-certifications">📜 Certifications & Courses
-        <button class="toggle-btn text-blue-500 text-sm" data-testid="button-toggle-certifications">➖</button>
-      </h2>
-      <ul id="certifications" class="list-disc list-inside text-sm section-content"></ul>
-    </section>
-  </div>
-
-  <!-- Scripts -->
-  <script src="./src/data.js?v=1.0.1" defer></script>
-  <script src="./src/renderWeb.js?v=1.0.1" defer></script>
-  <script src="./src/renderATS.js?v=1.0.1" defer></script>
-  <script src="./src/download.js?v=1.0.1" defer></script>
-
-  <script>
-    const accessTimeElement = document.getElementById("access-time");
-    if (accessTimeElement) {
-      const now = new Date();
-      const localTime = now.toLocaleString('en-GB', {
-        hour12: false,
-      });
-
-      accessTimeElement.textContent = `CV Accessed: ${localTime}`;
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll(".toggle-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-          const content = btn.parentElement.nextElementSibling;
-          content.classList.toggle("hidden");
-          btn.textContent = content.classList.contains("hidden") ? "➕" : "➖";
-        });
-      });
-    });
-
-    const downloadBtn = document.getElementById("download-btn");
-    const loadingOverlay = document.getElementById("loading-overlay");
-
-    if (downloadBtn && loadingOverlay) {
-      downloadBtn.addEventListener("click", () => {
-        loadingOverlay.classList.remove("hidden");
-
-        // Wait slightly to ensure UI shows before download starts
-        setTimeout(() => {
-          // Allow the existing download.js logic to execute
-          // Hide overlay after a timeout or modify this inside download.js
-          setTimeout(() => {
-            loadingOverlay.classList.add("hidden");
-          }, 3000);
-        }, 100);
-      });
-    }
+    window.onload = () => {
+      renderWebView(cvData);
+      initializeToggleButtons();
+    };
   </script>
 </body>
 

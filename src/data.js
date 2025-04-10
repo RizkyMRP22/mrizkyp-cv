@@ -1,5 +1,6 @@
-const cvData = {
-  photo: "https://github.com/RizkyMRP22/mrizkyp-cv/blob/main/assets/image.png?raw=true",
+//src/data.js
+export const cvData = {
+  photo: "https://raw.githubusercontent.com/RizkyMRP22/mrizkyp-cv/main/assets/image.png",
   name: "Mohammad Rizky Pratama",
   title: "Technical Lead & QA Engineer at Telkom Indonesia | CTFL - ISTQB",
   location: "Jakarta, Indonesia",
@@ -174,3 +175,5 @@ const cvData = {
     },
   ]
 };
+
+// export default cvData;
