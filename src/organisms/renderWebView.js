@@ -3,6 +3,8 @@ import { renderContactSection } from "../molecules/contactInfo.js";
 import { renderSection } from "../molecules/section.js";
 
 export function renderWebView(cvData) {
+  const formattedSummary = cvData.summary.replace(/\n\n/g, '<br><br>'); // Replace \n\n with <br><br>
+
   document.getElementById("profile").innerHTML = `
     <header class="text-center mb-12">
       <a id="profile-photo-link" href="#" target="_blank" rel="noopener noreferrer" class="inline-block p-1 border-4 border-blue-200 rounded-full hover:border-blue-500 transition" data-testid="link-profile-photo">
@@ -47,9 +49,14 @@ export function renderWebView(cvData) {
     icon: "🛠️",
     title: "Skills",
     content: `
-      <span data-testid="text-skills-languages"><strong>Languages:</strong> ${cvData.skills.languages.join(", ")}</span><br>
-      <span data-testid="text-skills-frameworks"><strong>Frameworks:</strong> ${cvData.skills.frameworks.join(", ")}</span><br>
-      <span data-testid="text-skills-tools"><strong>Tools:</strong> ${cvData.skills.tools.join(", ")}</span>`
+      <div data-testid="text-skills-tools">
+        <ul>${cvData.tech_skill.map(skillCategory => `
+          <div style="margin-bottom: 0.5em;">
+            <strong>${skillCategory.category}:</strong> ${skillCategory.tools.join(", ")}
+          </div>
+        `).join("")}</ul>
+      </div>
+    `
   });
 
   const projectsHTML = cvData.projects.map((p, index) => `
