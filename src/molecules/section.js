@@ -3,13 +3,19 @@ export function renderSection({ id, icon, title, content }) {
   if (!sectionEl) return;
 
   const contentHTML = `
-    <section class="mb-4 border-b border-gray-300 cursor-pointer" id="section-${id}">
-      <div class="flex justify-between items-center px-4 py-2 bg-white" onclick="toggleSection('${id}')">
-        <h2 class="text-2xl font-semibold flex items-center gap-2 cursor-pointer" data-testid="header-${id}">
+    <section class="mb-4 border-b border-gray-300" id="section-${id}">
+      <div 
+        class="flex justify-between items-center px-4 py-2 bg-white hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
+        onclick="toggleSection('${id}')"
+      >
+        <h2 
+          class="text-2xl font-semibold flex items-center gap-2 cursor-pointer transition-colors duration-200"
+          data-testid="header-${id}"
+        >
           ${icon} ${title}
         </h2>
         <button
-          class="toggle-btn text-gray-600 text-xl"
+          class="toggle-btn text-gray-500 hover:text-gray-700 text-xl transition-colors duration-200"
           data-testid="button-toggle-${id}"
           id="toggle-btn-${id}"
           onclick="event.stopPropagation(); toggleSection('${id}')"

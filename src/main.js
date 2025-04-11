@@ -15,9 +15,10 @@ window.onload = async () => {
   // ✅ 1. Show Welcome Overlay on Load
   const welcomeOverlay = createWelcomeOverlay();
   document.body.appendChild(welcomeOverlay);
+
   setTimeout(() => {
     hideWelcomeOverlay();
-  }, 1500); // Show for 1.5 seconds
+  }, 1500); // or adjust timing as needed
 
   // ✅ 2. Fetch Profile and Render Web View
   const profile = await fetchProfile();

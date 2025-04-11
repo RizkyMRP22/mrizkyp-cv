@@ -7,10 +7,14 @@ export function renderContactSection(cvData) {
         <i class="fas fa-map-marker-alt"></i> ${cvData.location}
       </span> <br/> 
   
-      <span class="text-black-500 inline-flex items-center gap-1 cursor-pointer hover:underline hover:text-blue-500 transition-colors duration-150" title="Copy email" data-testid="text-email"
-        onclick="navigator.clipboard.writeText('${cvData.email}').then(() => alert('Email copied!'))">
-        <i class="far fa-envelope"></i> ${cvData.email}
-      </span> · 
+      <span
+        class="inline-flex items-center gap-1 cursor-pointer hover:underline hover:text-blue-500 transition"
+        title="Click to copy email"
+        data-testid="text-email"
+        onclick="navigator.clipboard.writeText('${cvData.email}').then(() => alert('📧 Email copied to clipboard'))"
+      >
+        <i class="far fa-envelope text-gray-500"></i> ${cvData.email}
+      </span>
   
       <a href="https://wa.me/${whatsappPhone}" class="text-green-500 inline-flex items-center gap-1 hover:underline hover:text-green-600 transition-colors duration-150"
         title="Open WhatsApp" target="_blank" rel="noopener noreferrer" data-testid="link-whatsapp">
