@@ -9,11 +9,13 @@ export function renderSection({ id, icon, title, content }) {
           ${icon} ${title}
         </h2>
         <button
-          class="toggle-btn text-blue-500 text-xl font-bold"
+          class="toggle-btn text-gray-600 text-xl"
           data-testid="button-toggle-${id}"
           id="toggle-btn-${id}"
           onclick="event.stopPropagation(); toggleSection('${id}')"
-        >▲</button>
+        >
+          <i class="fas fa-chevron-up"></i>
+        </button>
       </div>
       <div class="section-content px-4 pb-4" id="${id}-content">
         ${content}
@@ -27,11 +29,15 @@ export function renderSection({ id, icon, title, content }) {
 window.toggleSection = function(id) {
   const contentEl = document.getElementById(`${id}-content`);
   const toggleBtn = document.getElementById(`toggle-btn-${id}`);
+  const iconEl = toggleBtn.querySelector('i');
+
   if (contentEl.classList.contains('hidden')) {
     contentEl.classList.remove('hidden');
-    toggleBtn.innerHTML = '▲';
+    iconEl.classList.remove('fa-chevron-down');
+    iconEl.classList.add('fa-chevron-up');
   } else {
     contentEl.classList.add('hidden');
-    toggleBtn.innerHTML = '▼';
+    iconEl.classList.remove('fa-chevron-up');
+    iconEl.classList.add('fa-chevron-down');
   }
 };
