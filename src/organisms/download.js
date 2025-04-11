@@ -1,7 +1,10 @@
 import { renderATSView } from "./renderATSView.js";
 import { cvData } from "../data.js";
+import { fetchProfile } from '../api/profile.js';
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
+  const profile = await fetchProfile();
+
   const btn = document.getElementById("download-btn");
   const now = new Date();
   const localTime = now.toLocaleString('en-GB', { hour12: false });
@@ -10,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.addEventListener("click", () => {
       const overlay = document.getElementById("loading-overlay");
       overlay.classList.remove("hidden");
-      renderATSView(cvData);
+      renderATSView(profile);
       const atsElement = document.getElementById("cv-ats");
       atsElement.classList.remove("hidden");
 

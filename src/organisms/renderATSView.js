@@ -1,5 +1,7 @@
 export function renderATSView(cvData) {
     const ats = document.getElementById("cv-ats");
+    const formattedSummary = cvData.summary.replace(/\n\n/g, '<br><br>'); // Replace \n\n with <br><br>
+
     ats.innerHTML = `
       <h1>${cvData.name}</h1>
       <p>Email: ${cvData.email}${cvData.phone ? ' | Phone: ' + cvData.phone : ''}</p>
@@ -9,7 +11,7 @@ export function renderATSView(cvData) {
       <p>Location: ${cvData.location}</p>
   
       <h2>PROFESSIONAL PROFILE</h2>
-      <p>${cvData.summary}</p>
+      <p>${formattedSummary}</p>
   
       <h2>PROFESSIONAL EXPERIENCE</h2>
       ${cvData.experiences.map(exp => `
