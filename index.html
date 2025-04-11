@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Profile of MRizkyP</title>
+  <title>MRizkyP — CV Profile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- External Styles -->
@@ -16,25 +16,25 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 
-<body class="bg-white text-gray-800 font-sans">
-  <!-- Loading Overlay will be injected dynamically -->
+<body class="bg-white text-gray-800 font-sans antialiased leading-relaxed">
+
+  <!-- 🔄 Welcome / Loading Overlays -->
   <div id="loading-overlay-placeholder"></div>
-  <!-- Gradient Border Wrapper -->
-  <div class="min-h-screen bg-gradient-to-br from-white to-gray-300 p-1 sm:p-4">
-    <!-- Inner Content Area -->
-    <div class="bg-white rounded-lg shadow-md p-6 sm:p-10">
 
-      <!-- Access Time -->
-      <div id="access-time" class="fixed top-2 left-2 text-xs text-gray-500"></div>
+  <!-- 🎨 Page Wrapper with Gradient Border -->
+  <div class="min-h-screen bg-gradient-to-br from-white to-gray-200 p-2 sm:p-6">
 
-      <!-- Loading Overlay will be injected dynamically -->
-      <div id="loading-overlay-placeholder"></div>
+    <!-- 🧾 Main Card -->
+    <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-10 max-w-5xl mx-auto">
 
-      <!-- Download Button will be injected dynamically -->
-      <div class="flex justify-end mb-4" id="download-button-container"></div>
+      <!-- ⏱️ Access Timestamp -->
+      <div id="access-time" class="fixed top-2 left-2 text-xs text-gray-400"></div>
 
-      <!-- Main Content -->
-      <main id="cv-content">
+      <!-- 📥 Download Button -->
+      <div class="flex justify-end mb-6" id="download-button-container"></div>
+
+      <!-- 📄 CV Sections -->
+      <main id="cv-content" class="space-y-6">
         <div id="cv-ats" class="hidden"></div>
         <div id="profile"></div>
         <div id="summary"></div>
@@ -45,11 +45,13 @@
         <div id="certifications"></div>
       </main>
     </div>
-    <div id="footer"></div>
+
+    <!-- 👣 Footer -->
+    <div id="footer" class="mt-6"></div>
   </div>
 
-  <!-- ✅ Unified entry point for all JS -->
+  <!-- 📦 Entry Point Script -->
   <script type="module" src="/src/main.js"></script>
-  
+
 </body>
 </html>
