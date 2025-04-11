@@ -3,41 +3,55 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Profile of MRizkyP</title>
+  <title>MRizkyP — CV Profile</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- External Styles -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- html2pdf.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-  <script type="module" crossorigin src="/mrizkyp-cv/assets/index-CrRih7-p.js"></script>
+  <script type="module" crossorigin src="/mrizkyp-cv/assets/index-mQj3k1am.js"></script>
   <link rel="stylesheet" crossorigin href="/mrizkyp-cv/assets/index-pm6Y9WPP.css">
 </head>
 
-<body class="bg-white text-gray-800 font-sans p-10">
-  <div id="access-time" class="fixed top-2 left-2 text-xs text-gray-500"></div>
+<body class="bg-white text-gray-800 font-sans antialiased leading-relaxed">
 
-  <!-- Loading Overlay will be injected dynamically -->
+  <!-- 🔄 Welcome / Loading Overlays -->
   <div id="loading-overlay-placeholder"></div>
 
-  <!-- Download Button will be injected dynamically -->
-  <div class="flex justify-end mb-4" id="download-button-container"></div>
+  <!-- 🎨 Page Wrapper with Gradient Border -->
+  <div class="min-h-screen bg-gradient-to-br from-white to-gray-200 p-2 sm:p-6">
 
-  <!-- Main Content -->
-  <main id="cv-content">
-    <div id="cv-ats" class="hidden"></div>
-    <div id="profile"></div>
-    <div id="summary"></div>
-    <div id="experiences"></div>
-    <div id="education"></div>
-    <div id="skills"></div>
-    <div id="projects"></div>
-    <div id="certifications"></div>
-  </main>
+    <!-- 🧾 Main Card -->
+    <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-10 max-w-5xl mx-auto">
 
-  <!-- ✅ Unified entry point for all JS -->
+      <!-- ⏱️ Access Timestamp -->
+      <div id="access-time" class="fixed top-2 left-2 text-[10px] sm:text-xs text-gray-400 font-mono opacity-80 select-none"></div>
+      
+      <!-- 📥 Download Button -->
+      <div class="flex justify-end mb-6" id="download-button-container"></div>
+
+      <!-- 📄 CV Sections -->
+      <main id="cv-content" class="space-y-6">
+        <div id="cv-ats" class="hidden"></div>
+        <div id="profile"></div>
+        <div id="summary"></div>
+        <div id="experiences"></div>
+        <div id="education"></div>
+        <div id="skills"></div>
+        <div id="projects"></div>
+        <div id="certifications"></div>
+      </main>
+    </div>
+
+    <!-- 👣 Footer -->
+    <div id="footer" class="mt-6"></div>
+  </div>
+
+  <!-- 📦 Entry Point Script -->
+
 </body>
-
 </html>
