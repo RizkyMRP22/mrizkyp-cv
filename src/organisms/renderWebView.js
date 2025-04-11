@@ -70,19 +70,51 @@ export function renderWebView(cvData) {
     content: `<ul class="list-disc list-inside text-sm">${projectsHTML}</ul>`
   });
 
-  const certsHTML = cvData.certifications
-    .filter(cert => cert.name && cert.name.trim() !== "")
-    .map((cert, index) => {
-      const details = [cert.type, cert.name.trim(), cert.provider?.trim(), cert.years?.trim()].filter(Boolean).join(" – ");
-      return cert.link && cert.link.startsWith("http")
-        ? `<li><a href="${cert.link}" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer" data-testid="link-certification-${index}">${details}</a></li>`
-        : `<li data-testid="text-certification-${index}">${details}</li>`;
-    }).join("");
+  const certsTableRows = cvData.certifications
+  .filter(cert => cert.name && cert.name.trim() !== "")
+  .map((cert, index) => {
+    const type = cert.type || "-";
+    const name = cert.name.trim();
+    const provider = cert.provider?.trim() || "-";
+    const years = cert.years?.trim() || "-";
+
+    const hasValidLink = cert.link && cert.link.startsWith("http");
+    const action = hasValidLink
+      ? `<a href="${cert.link}" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer" data-testid="link-certification-${index}">View</a>`
+      : `<span class="text-gray-400 cursor-not-allowed" data-testid="disabled-certification-${index}">Not Available</span>`;
+
+    return `
+      <tr class="border-b">
+        <td class="px-4 py-2">${type}</td>
+        <td class="px-4 py-2" data-testid="text-certification-${index}">${name}</td>
+        <td class="px-4 py-2">${provider}</td>
+        <td class="px-4 py-2">${years}</td>
+        <td class="px-4 py-2">${action}</td>
+      </tr>
+    `;
+  }).join("");
 
   renderSection({
     id: "certifications",
     icon: "📜",
     title: "Certifications & Courses",
-    content: `<ul class="list-disc list-inside text-sm">${certsHTML}</ul>`
+    content: `
+      <div class="overflow-x-auto">
+        <table class="min-w-full table-auto text-sm border-collapse border border-gray-300">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="px-4 py-2 text-left whitespace-nowrap">Type</th>
+              <th class="px-4 py-2 text-left whitespace-nowrap">Name</th>
+              <th class="px-4 py-2 text-left whitespace-nowrap">Provider</th>
+              <th class="px-4 py-2 text-left whitespace-nowrap">Years</th>
+              <th class="px-4 py-2 text-left whitespace-nowrap">Certificate</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${certsTableRows}
+          </tbody>
+        </table>
+      </div>
+    `
   });
 }
