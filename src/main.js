@@ -9,6 +9,7 @@ import { fetchProfile } from './api/profile.js';
 import { createDownloadButton } from './atoms/downloadButton.js';
 import { createLoadingOverlay, showLoading, hideLoading } from './atoms/loadingOverlay.js';
 import { createWelcomeOverlay, hideWelcomeOverlay } from './atoms/welcomeOverlay.js';
+import { renderFooter } from './atoms/footer.js';
 
 window.onload = async () => {
   // ✅ 1. Show Welcome Overlay on Load
@@ -48,4 +49,7 @@ window.onload = async () => {
       hideLoading();
     }, 3000);
   });
+
+  renderFooter();
+
 };
