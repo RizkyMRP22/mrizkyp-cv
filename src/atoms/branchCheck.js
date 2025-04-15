@@ -5,7 +5,7 @@ export function branchCheck() {
         if (branch === 'develop' || branch === 'dev') {
             const tagEl = document.createElement('div');
             tagEl.textContent = 'Development Mode';
-            tagEl.className = 'fixed top-2 left-1/2 -translate-x-1/2 px-3 py-1 bg-yellow-400 text-black text-xs font-semibold rounded shadow z-50';
+            tagEl.className = 'fixed top-2 right-2 -translate-x-1/2 px-3 py-1 bg-yellow-400 text-black text-xs font-semibold rounded shadow z-50';
             document.body.appendChild(tagEl);
         }
     }

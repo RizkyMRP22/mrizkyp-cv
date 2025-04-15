@@ -3,6 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (accessTimeElement) {
     const now = new Date();
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    let zoneLabel = "";
+
+    if (timeZone === "Asia/Jakarta") {
+      zoneLabel = "WIB";
+    } else if (timeZone === "Asia/Makassar") {
+      zoneLabel = "WITA";
+    } else if (timeZone === "Asia/Jayapura") {
+      zoneLabel = "WIT";
+    }
+
     const formattedDate = new Intl.DateTimeFormat("en-GB", {
       weekday: "short",
       day: "2-digit",
@@ -13,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       hour12: false,
     }).format(now);
 
-    accessTimeElement.textContent = `🕒 Accessed: ${formattedDate}`;
+    accessTimeElement.textContent = `🕒 Accessed: ${formattedDate} ${zoneLabel}`;
     accessTimeElement.title = now.toISOString(); // optional: raw timestamp on hover
   }
 });
