@@ -1,3 +1,5 @@
+let latestAccessTime = "";
+
 document.addEventListener("DOMContentLoaded", () => {
   const accessTimeElement = document.getElementById("access-time");
 
@@ -24,7 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
       hour12: false,
     }).format(now);
 
-    accessTimeElement.textContent = `🕒 Accessed: ${formattedDate} ${zoneLabel}`;
+    latestAccessTime = `🕒 Accessed: ${formattedDate} ${zoneLabel}`;
+    accessTimeElement.textContent = latestAccessTime;
     accessTimeElement.title = now.toISOString(); // optional: raw timestamp on hover
   }
 });
+
+export function getLatestAccessTime() {
+  return latestAccessTime;
+}

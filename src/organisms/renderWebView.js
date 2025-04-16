@@ -20,7 +20,7 @@ export function renderWebView(cvData) {
     </header>
   `;
 
-  renderPhoto(cvData.photo);
+  renderPhoto(cvData.photo, cvData.name, cvData.title);
   renderContactSection(cvData);
 
   // 📝 Summary
