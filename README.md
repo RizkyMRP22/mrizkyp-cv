@@ -74,6 +74,7 @@ npm run deploy
 ---
 
 ## 🧩 Inspired By
+
 - [Atomic Design by Brad Frost](https://bradfrost.com/blog/post/atomic-web-design/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Vite](https://vitejs.dev/)
